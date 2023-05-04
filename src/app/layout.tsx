@@ -1,6 +1,8 @@
 import { ReactNode } from 'react';
 
-import { ThemeProvider } from '@/theme/provider';
+import { Providers as ThemeProvider } from '@/contexts/Theme';
+
+import '@/styles/globals.css';
 
 export const metadata = {
   title: 'Create Next App',
