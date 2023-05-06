@@ -1,5 +1,30 @@
 {
-  "typescript.tsdk": "node_modules/.pnpm/typescript@5.0.4/node_modules/typescript/lib",
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": true,
+    "source.fixAll.eslint": true,
+    "source.fixAll.stylelint": true
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.renderWhitespace": "all",
+  "editor.tabSize": 2,
+  "eslint.format.enable": true,
+  "eslint.run": "onSave",
+  "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+  "javascript.preferences.quoteStyle": "single",
+  "prettier.arrowParens": "always",
+  "prettier.enable": true,
+  "prettier.jsxSingleQuote": false,
+  "prettier.printWidth": 140,
+  "prettier.singleQuote": true,
+  "prettier.trailingComma": "all",
   "typescript.enablePromptUseWorkspaceTsdk": true,
-  "cSpell.words": ["chakra", "Chakra", "ecma", "esnext", "tailwindcss"]
+  "typescript.preferences.quoteStyle": "single",
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "[javascript, typescript, typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "cSpell.words": ["clsx", "ecma", "esnext", "Linkedin", "montserrat", "poppins", "tailwindcss"]
 }

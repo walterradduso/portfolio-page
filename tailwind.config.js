@@ -8,7 +8,19 @@ module.exports = {
   ],
   darkMode: 'class',
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        primary: '#fd7e14',
+        'w-black': '#111418',
+        'w-white': '#111418',
+        'w-gray': '#343a40',
+      },
+      fontFamily: {
+        montserrat: ['Montserrat', 'sans-serif'],
+        poppins: ['Poppins', 'sans-serif'],
+        quicksand: ['Quicksand', 'sans-serif'],
+      },
+    },
   },
   plugins: [],
 };

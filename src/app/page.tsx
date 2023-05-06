@@ -1,13 +1,11 @@
-import { Text } from '@/components/Text';
-import { ThemeSwitcher } from '@/components/ThemeSwitcher';
+import { NavContainer } from '@/app/components/NavContainer';
 
 export default function Home() {
   return (
-    <main>
+    <main className="ml-60 h-[200vh]">
       <h1>Walter Radduso Portfolio</h1>
 
-      <Text />
-      <ThemeSwitcher />
+      <NavContainer />
     </main>
   );
 }
