@@ -1,10 +1,10 @@
 import { render } from '@testing-library/react';
 
-import Text from '../Text';
+import MenuLink from '../MenuLink';
 
-describe('Text', () => {
+describe('MenuLink', () => {
   it('should render correctly', () => {
-    const { container } = render(<Text />);
+    const { container } = render(<MenuLink href="#href" label="label" />);
 
     expect(container).toBeInTheDocument();
   });

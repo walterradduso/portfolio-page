@@ -7,7 +7,7 @@ interface Props {
 
 function MenuLink({ href, label }: Props): ReactElement {
   return (
-    <a className="block w-full cursor-pointer py-2 text-base hover:text-primary" href={href}>
+    <a className="block w-full cursor-pointer py-2 text-base text-primary-light-color hover:text-primary" href={href}>
       {label}
     </a>
   );

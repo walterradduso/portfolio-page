@@ -8,20 +8,20 @@ import { MenuLink } from '@/components/MenuLink';
 function NavBurger(): ReactElement {
   const [isOpen, setIsOpen] = useState(false);
 
-  const firstLine = clsx('absolute block h-0.5 w-6 bg-current transition duration-500 ease-in-out', {
+  const firstLine = clsx('absolute block h-0.5 w-6 bg-primary-light-color transition duration-500 ease-in-out', {
     'rotate-45': isOpen,
     '-translate-y-1.5': !isOpen,
   });
-  const secondLine = clsx('absolute block h-0.5 w-6 bg-current transition duration-500 ease-in-out', {
+  const secondLine = clsx('absolute block h-0.5 w-6 bg-primary-light-color transition duration-500 ease-in-out', {
     'opacity-0': isOpen,
   });
-  const thirdLine = clsx('absolute block h-0.5 w-6 bg-current transition duration-500 ease-in-out', {
+  const thirdLine = clsx('absolute block h-0.5 w-6 bg-primary-light-color transition duration-500 ease-in-out', {
     '-rotate-45': isOpen,
     'translate-y-1.5': !isOpen,
   });
 
   const menuStyles = clsx(
-    'absolute left-0 top-14 block w-full overflow-hidden bg-w-black-1 transition-all duration-500 ease-in-out md:hidden',
+    'absolute left-0 top-14 block w-full overflow-hidden bg-primary-menu-color transition-all duration-500 ease-in-out md:hidden',
     {
       'max-h-0': !isOpen,
       'max-h-60': isOpen,

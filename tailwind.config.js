@@ -18,11 +18,15 @@ module.exports = {
     },
     extend: {
       colors: {
-        'w-black-1': '#010101',
-        'w-black-2': '#121418',
+        'primary-menu-color': '#010101',
+        'secondary-menu-color': '#121418',
         'w-gray': '#343a40',
         'w-light-white': '#fafafa26',
         'w-white': '#111418',
+        'primary-light-color': '#ffffff',
+        'secondary-light-color': '#f8f9fa',
+        'primary-dark-color': '#212529',
+        'secondary-dark-color': '#343a40',
         primary: '#fd7e14',
       },
       fontFamily: {
