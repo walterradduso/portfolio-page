@@ -18,10 +18,12 @@ module.exports = {
     },
     extend: {
       colors: {
-        primary: '#fd7e14',
-        'w-black': '#111418',
-        'w-white': '#111418',
+        'w-black-1': '#010101',
+        'w-black-2': '#121418',
         'w-gray': '#343a40',
+        'w-light-white': '#fafafa26',
+        'w-white': '#111418',
+        primary: '#fd7e14',
       },
       fontFamily: {
         montserrat: ['Montserrat', 'sans-serif'],
