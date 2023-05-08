@@ -21,6 +21,8 @@ module.exports = {
         'primary-menu-color': '#010101',
         'secondary-menu-color': '#121418',
         'w-gray': '#343a40',
+        'primary-light-gray': '#dee3e4',
+        'primary-dark-gray': '#6c757d',
         'w-light-white': '#fafafa26',
         'w-white': '#111418',
         'primary-light-color': '#ffffff',

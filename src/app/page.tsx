@@ -1,6 +1,5 @@
-import { NavContainer } from '@/app/components/NavContainer';
-
-import PageContainer from './components/PageContainer/PageContainer';
+import { NavContainer } from './components/NavContainer';
+import { PageContainer } from './components/PageContainer';
 
 export default function Home() {
   return (

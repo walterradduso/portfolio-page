@@ -7,23 +7,23 @@ function NavLinks(): ReactElement {
     <section className="hidden w-full text-center md:block">
       <ul className="flex flex-col items-center justify-center p-4">
         <li className="w-full">
-          <MenuLink href="#home" label="Home" />
+          <MenuLink href="Home" label="Home" />
         </li>
 
         <li className="w-full">
-          <MenuLink href="#about" label="About Me" />
+          <MenuLink href="AboutMe" label="About Me" />
         </li>
 
         <li className="w-full">
-          <MenuLink href="#resume" label="Resume" />
+          <MenuLink href="Resume" label="Resume" />
         </li>
 
         <li className="w-full">
-          <MenuLink href="#portfolio" label="Portfolio" />
+          <MenuLink href="Portfolio" label="Portfolio" />
         </li>
 
         <li className="w-full">
-          <MenuLink href="#contact" label="Contact" />
+          <MenuLink href="Contact" label="Contact" />
         </li>
       </ul>
     </section>
