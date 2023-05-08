@@ -21,7 +21,7 @@ function NavBurger(): ReactElement {
   });
 
   const menuStyles = clsx(
-    'absolute left-0 top-14 block w-full overflow-hidden bg-primary-menu-color transition-all duration-500 ease-in-out md:hidden',
+    'absolute left-0 top-14 z-10 block w-full overflow-hidden bg-primary-menu-color transition-all duration-500 ease-in-out md:hidden',
     {
       'max-h-0': !isOpen,
       'max-h-60': isOpen,

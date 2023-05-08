@@ -1,6 +1,8 @@
 import { ReactElement } from 'react';
 import { BsGithub, BsLinkedin, BsTwitter } from 'react-icons/bs';
 
+import { ThemeSwitcher } from '@/components/ThemeSwitcher';
+
 function NavSocial(): ReactElement {
   return (
     <section className="my-0 md:mb-4 md:mt-0">
@@ -22,6 +24,8 @@ function NavSocial(): ReactElement {
             <BsTwitter />
           </a>
         </li>
+
+        <ThemeSwitcher />
       </ul>
     </section>
   );
