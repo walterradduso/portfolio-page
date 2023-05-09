@@ -17,6 +17,9 @@ module.exports = {
       '2xl': '1536px',
     },
     extend: {
+      animation: {
+        'fade-in-down': 'fadeInDown 1.5s infinite',
+      },
       colors: {
         'primary-menu-color': '#010101',
         'secondary-menu-color': '#121418',
@@ -29,12 +32,25 @@ module.exports = {
         'secondary-light-color': '#f8f9fa',
         'primary-dark-color': '#212529',
         'secondary-dark-color': '#343a40',
-        primary: '#fd7e14',
+        primary: '#0d6efd',
+        dark: '#333333',
       },
       fontFamily: {
         montserrat: ['Montserrat', 'sans-serif'],
         poppins: ['Poppins', 'sans-serif'],
         quicksand: ['Quicksand', 'sans-serif'],
+      },
+      keyframes: {
+        fadeInDown: {
+          '0%': {
+            opacity: 0,
+            transform: 'translateY(-20px)',
+          },
+          '100%': {
+            opacity: 1,
+            transform: 'translateY(0px)',
+          },
+        },
       },
     },
   },

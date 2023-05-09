@@ -12,8 +12,9 @@ function Title({ className, subText, text }: Props): ReactElement {
 
   return (
     <section className={titleStyle}>
-      <h2 className="text-center text-9xl font-semibold uppercase text-primary-light-gray dark:text-primary-dark-gray">{text}</h2>
-      <p className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-center text-4xl font-semibold">
+      <h2 className="text-center text-9xl font-semibold uppercase text-primary-light-gray/40 dark:text-primary-dark-gray/40">{text}</h2>
+
+      <p className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-center text-4xl font-semibold text-dark dark:text-white">
         {subText}
 
         <span className="m-auto mt-2 block w-20 border-b-4 border-primary" />
