@@ -19,11 +19,13 @@ module.exports = {
     extend: {
       animation: {
         'fade-in-down': 'fadeInDown 1.5s infinite',
+        'cd-bounce': 'cdBounce 0.6s',
       },
       colors: {
         'primary-menu-color': '#010101',
         'secondary-menu-color': '#121418',
         'w-gray': '#343a40',
+        'w-gray-2': '#eaeaea',
         'primary-light-gray': '#dee3e4',
         'primary-dark-gray': '#6c757d',
         'w-light-white': '#fafafa26',
@@ -40,6 +42,13 @@ module.exports = {
         poppins: ['Poppins', 'sans-serif'],
         quicksand: ['Quicksand', 'sans-serif'],
       },
+      fontSize: {
+        'fluid-title': 'calc(1.95rem + 8.4vw)',
+      },
+      boxShadow: {
+        timeline: '0 0 0 4px white, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05)',
+        'timeline-content': '0 3px 0 #ddd',
+      },
       keyframes: {
         fadeInDown: {
           '0%': {
@@ -49,6 +58,19 @@ module.exports = {
           '100%': {
             opacity: 1,
             transform: 'translateY(0px)',
+          },
+        },
+        cdBounce: {
+          '0%': {
+            opacity: '0',
+            transform: 'scale(0.5)',
+          },
+          '60%': {
+            opacity: '1',
+            transform: 'scale(1.2)',
+          },
+          '100%': {
+            transform: 'scale(1)',
           },
         },
       },

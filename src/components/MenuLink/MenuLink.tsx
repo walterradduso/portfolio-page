@@ -1,7 +1,9 @@
 'use client';
 
+import clsx from 'clsx';
 import { ReactElement } from 'react';
 
+import { useActiveSection } from '@/contexts/ActiveSection';
 import { scrollIntoView } from '@/utils/scrollIntoView';
 
 interface Props {
@@ -10,9 +12,16 @@ interface Props {
 }
 
 function MenuLink({ href, label }: Props): ReactElement {
+  const { activeSection } = useActiveSection();
+
+  const buttonStyles = clsx('block w-full cursor-pointer py-2 text-base hover:text-primary', {
+    'text-primary': activeSection === href,
+    'text-primary-light-color': activeSection !== href,
+  });
+
   return (
     <button
-      className="block w-full cursor-pointer py-2 text-base text-primary-light-color hover:text-primary"
+      className={buttonStyles}
       onClick={() => {
         scrollIntoView(href);
       }}

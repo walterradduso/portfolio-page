@@ -1,6 +1,8 @@
+import { ReactElement } from 'react';
+
 import HomeContent from './HomeContent';
 
-function Home() {
+function Home(): ReactElement {
   const sequence = ["I'm Walter Radduso", 3000, "I'm a Frontend Engineer.", 3000, ''];
 
   return (

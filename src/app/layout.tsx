@@ -1,7 +1,6 @@
 import { ReactNode } from 'react';
 
 import { Providers as ThemeProvider } from '@/contexts/Theme';
-
 import '@/styles/globals.css';
 
 export const metadata = {
@@ -19,7 +18,7 @@ interface Props {
 export default function RootLayout({ children }: Props) {
   return (
     <html lang="en">
-      <body className="bg-gray-500">
+      <body>
         <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>

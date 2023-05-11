@@ -26,5 +26,5 @@
   "[javascript, typescript, typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "cSpell.words": ["clsx", "ecma", "esnext", "Linkedin", "montserrat", "poppins", "tailwindcss"]
+  "cSpell.words": ["classname", "clsx", "ecma", "esnext", "Linkedin", "montserrat", "poppins", "tailwindcss"]
 }

@@ -1,5 +1,10 @@
+'use client';
+
 import clsx from 'clsx';
 import { ReactElement, ReactNode } from 'react';
+
+import { useActiveSection } from '@/contexts/ActiveSection';
+import useIntersectionObserver from '@/hooks/useIntersectionObserver';
 
 interface Props {
   children: ReactNode;
@@ -7,14 +12,17 @@ interface Props {
   id?: string;
 }
 
-function SectionContainer({ children, className, id }: Props): ReactElement {
-  const sectionStyles = clsx('min-h-screen relative z-1', className);
+function SectionHoc({ children, className, id }: Props): ReactElement {
+  const { setActiveSection } = useActiveSection();
+  const ref = useIntersectionObserver((intersectedId) => setActiveSection(intersectedId));
+
+  const sectionStyles = clsx('relative z-0 min-h-screen', className);
 
   return (
-    <section className={sectionStyles} id={id}>
+    <section ref={ref} className={sectionStyles} id={id}>
       {children}
     </section>
   );
 }
 
-export default SectionContainer;
+export default SectionHoc;
