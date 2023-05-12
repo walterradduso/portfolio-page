@@ -19,6 +19,10 @@ function NavLinks(): ReactElement {
         </li>
 
         <li className="w-full">
+          <MenuLink href="Skills" label="Skills" />
+        </li>
+
+        <li className="w-full">
           <MenuLink href="Portfolio" label="Portfolio" />
         </li>
 

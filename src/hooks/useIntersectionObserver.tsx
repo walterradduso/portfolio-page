@@ -1,5 +1,7 @@
 import { useEffect, useRef } from 'react';
 
+import { sectionThresholds } from '@/constants';
+
 const useIntersectionObserver = (onIntersect: (id: string | null) => void) => {
   const ref = useRef<HTMLDivElement>(null);
 
@@ -10,6 +12,8 @@ const useIntersectionObserver = (onIntersect: (id: string | null) => void) => {
     }
 
     const currentRef = ref.current;
+    const threshold = sectionThresholds[currentRef?.id ?? ''] ?? 0.5;
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -19,7 +23,7 @@ const useIntersectionObserver = (onIntersect: (id: string | null) => void) => {
       {
         root: null,
         rootMargin: '0px',
-        threshold: 0.5,
+        threshold,
       },
     );
 
