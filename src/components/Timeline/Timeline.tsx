@@ -8,7 +8,10 @@ interface Props {
 
 function Timeline({ className, children }: Props): ReactElement {
   const timelineStyle = clsx(
-    'relative mx-auto my-0 box-border w-full max-w-6xl px-0 py-8 before:absolute before:left-4 before:top-0 before:-ml-0.5 before:h-full before:w-1 before:bg-white/80 md:left-1/2 md:-ml-8 md:h-14 md:w-14',
+    'relative mx-auto my-0 w-11/12 max-w-6xl px-0 py-8',
+    'after:clear-both after:table',
+    'before:absolute before:left-4 before:top-0 before:h-full before:w-1 before:bg-gray-400',
+    'sm:w-11/12 sm:before:left-1/2 sm:before:-ml-1.5',
     className,
   );
 

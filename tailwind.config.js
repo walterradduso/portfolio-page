@@ -18,8 +18,10 @@ module.exports = {
     },
     extend: {
       animation: {
+        'custom-bounce': 'customBounce 0.6s',
         'fade-in-down': 'fadeInDown 1.5s infinite',
-        'cd-bounce': 'cdBounce 0.6s',
+        'left-enter': 'leftEnter 0.6s',
+        'right-enter': 'rightEnter 0.6s',
       },
       colors: {
         'primary-menu-color': '#010101',
@@ -46,21 +48,11 @@ module.exports = {
         'fluid-title': 'calc(1.95rem + 8.4vw)',
       },
       boxShadow: {
-        timeline: '0 0 0 4px white, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05)',
-        'timeline-content': '0 3px 0 #ddd',
+        'dark-icon-timeline': '0 0 0 4px #1f2937',
+        'icon-timeline': '0 0 0 4px white',
       },
       keyframes: {
-        fadeInDown: {
-          '0%': {
-            opacity: 0,
-            transform: 'translateY(-20px)',
-          },
-          '100%': {
-            opacity: 1,
-            transform: 'translateY(0px)',
-          },
-        },
-        cdBounce: {
+        customBounce: {
           '0%': {
             opacity: '0',
             transform: 'scale(0.5)',
@@ -71,6 +63,42 @@ module.exports = {
           },
           '100%': {
             transform: 'scale(1)',
+          },
+        },
+        fadeInDown: {
+          '0%': {
+            opacity: 0,
+            transform: 'translateY(-20px)',
+          },
+          '100%': {
+            opacity: 1,
+            transform: 'translateY(0px)',
+          },
+        },
+        leftEnter: {
+          '0%': {
+            opacity: '0',
+            transform: 'translateX(-100px)',
+          },
+          '60%': {
+            opacity: '1',
+            transform: 'translateX(20px)',
+          },
+          '100%': {
+            transform: 'translateX(0)',
+          },
+        },
+        rightEnter: {
+          '0%': {
+            opacity: '0',
+            transform: 'translateX(100px)',
+          },
+          '60%': {
+            opacity: '1',
+            transform: 'translateX(-20px)',
+          },
+          '100%': {
+            transform: 'translateX(0)',
           },
         },
       },
