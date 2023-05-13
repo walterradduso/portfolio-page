@@ -4,6 +4,8 @@ import { FaAddressBook } from 'react-icons/fa';
 import { Timeline, TimelineItem } from '@/components/Timeline';
 import { Title } from '@/components/Title';
 
+import { Skills } from '../Skills';
+
 function Resume(): ReactElement {
   return (
     <section className="py-16">
@@ -117,6 +119,8 @@ function Resume(): ReactElement {
           </div>
         </TimelineItem>
       </Timeline>
+
+      <Skills />
     </section>
   );
 }

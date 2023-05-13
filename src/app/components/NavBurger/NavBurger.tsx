@@ -53,10 +53,6 @@ function NavBurger(): ReactElement {
           </li>
 
           <li className="w-full border-b border-w-light-white">
-            <MenuLink href="Skills" label="Skills" />
-          </li>
-
-          <li className="w-full border-b border-w-light-white">
             <MenuLink href="Portfolio" label="Portfolio" />
           </li>
 

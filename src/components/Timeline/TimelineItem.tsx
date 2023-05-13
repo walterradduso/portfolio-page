@@ -52,7 +52,7 @@ function TimelineItem({ children, className, date, icon, iconClassName, isRight 
     'dark:text-gray-500',
     'sm:absolute sm:w-full sm:text-lg sm:text-gray-500 sm:dark:text-gray-300',
     {
-      'sm:right-[128%] sm:text-right': isRight,
+      'sm:right-[130%] sm:text-right': isRight,
       'sm:left-[128%]': !isRight,
     },
   );

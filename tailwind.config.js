@@ -23,6 +23,10 @@ module.exports = {
         'left-enter': 'leftEnter 0.6s',
         'right-enter': 'rightEnter 0.6s',
       },
+      boxShadow: {
+        'dark-icon-timeline': '0 0 0 4px #1f2937',
+        'icon-timeline': '0 0 0 4px white',
+      },
       colors: {
         'primary-menu-color': '#010101',
         'secondary-menu-color': '#121418',
@@ -36,8 +40,9 @@ module.exports = {
         'secondary-light-color': '#f8f9fa',
         'primary-dark-color': '#212529',
         'secondary-dark-color': '#343a40',
-        primary: '#0d6efd',
         dark: '#333333',
+        primary: '#0d6efd',
+        secondary: '#04b4e0',
       },
       fontFamily: {
         montserrat: ['Montserrat', 'sans-serif'],
@@ -46,10 +51,6 @@ module.exports = {
       },
       fontSize: {
         'fluid-title': 'calc(1.95rem + 8.4vw)',
-      },
-      boxShadow: {
-        'dark-icon-timeline': '0 0 0 4px #1f2937',
-        'icon-timeline': '0 0 0 4px white',
       },
       keyframes: {
         customBounce: {
@@ -101,6 +102,9 @@ module.exports = {
             transform: 'translateX(0)',
           },
         },
+      },
+      width: {
+        18: '4.5rem',
       },
     },
   },
