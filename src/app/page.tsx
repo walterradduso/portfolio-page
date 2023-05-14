@@ -1,13 +1,15 @@
-import { Text } from '@/components/Text';
-import { ThemeSwitcher } from '@/components/ThemeSwitcher';
+import { ActiveSectionProvider } from '@/contexts/ActiveSection';
+
+import { NavContainer } from './components/NavContainer';
+import { PageContainer } from './components/PageContainer';
 
 export default function Home() {
   return (
-    <main>
-      <h1>Walter Radduso Portfolio</h1>
-
-      <Text />
-      <ThemeSwitcher />
+    <main className="ml-0 mt-14 md:ml-60 md:mt-0">
+      <ActiveSectionProvider initialActiveSection="">
+        <NavContainer />
+        <PageContainer />
+      </ActiveSectionProvider>
     </main>
   );
 }

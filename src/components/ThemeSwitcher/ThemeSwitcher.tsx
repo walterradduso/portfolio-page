@@ -2,7 +2,8 @@
 
 import { useTheme } from 'next-themes';
 import { useEffect, useState } from 'react';
-import { BsFillMoonFill, BsFillSunFill } from 'react-icons/bs';
+import { BsSunFill } from 'react-icons/bs';
+import { RiMoonFill } from 'react-icons/ri';
 
 function ThemeSwitcher() {
   const [mounted, setMounted] = useState(false);
@@ -18,17 +19,12 @@ function ThemeSwitcher() {
 
   const currentTheme = theme === 'system' ? systemTheme : theme;
 
-  if (currentTheme === 'dark') {
-    return (
-      <button onClick={() => setTheme('light')}>
-        <BsFillSunFill />
-      </button>
-    );
-  }
-
   return (
-    <button onClick={() => setTheme('dark')}>
-      <BsFillMoonFill />
+    <button
+      className="cursor-pointer text-base text-white hover:text-primary"
+      onClick={() => setTheme(currentTheme === 'dark' ? 'light' : 'dark')}
+    >
+      {currentTheme === 'dark' ? <BsSunFill /> : <RiMoonFill />}
     </button>
   );
 }
