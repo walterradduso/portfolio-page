@@ -4,4 +4,5 @@ interface SectionThresholds {
 
 export const sectionThresholds: SectionThresholds = {
   Resume: 0.3,
+  Portfolio: 0.3,
 };
