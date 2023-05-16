@@ -39,7 +39,7 @@ function NavBurger(): ReactElement {
       </button>
 
       <section className={menuStyles}>
-        <ul className="flex flex-col items-center justify-center p-4">
+        <ul className="flex flex-col items-center justify-center py-4">
           <li className="w-full border-b border-w-light-white">
             <MenuLink href="Home" label="Home" />
           </li>

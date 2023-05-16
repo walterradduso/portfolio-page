@@ -7,12 +7,12 @@ import { useActiveSection } from '@/contexts/ActiveSection';
 import useIntersectionObserver from '@/hooks/useIntersectionObserver';
 
 interface Props {
-  children: ReactNode;
+  children: ReactNode | ReactElement;
   className?: string;
   id?: string;
 }
 
-function SectionHoc({ children, className, id }: Props): ReactElement {
+function SectionHoc({ children, className, id }: Props) {
   const { setActiveSection } = useActiveSection();
   const ref = useIntersectionObserver((intersectedId) => setActiveSection(intersectedId));
 

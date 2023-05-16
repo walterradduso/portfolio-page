@@ -27,8 +27,8 @@ function TimelineItem({ children, className, date, icon, iconClassName, isRight 
   );
 
   const contentStyle = clsx(
-    'relative ml-14 animate-right-enter rounded border-t-4 border-primary bg-gray-d p-4 text-dark',
-    'dark:bg-white dark:text-dark',
+    'relative ml-14 animate-right-enter rounded border-t-4 border-primary bg-primary-light-gray/40 p-4 text-dark',
+    'dark:bg-light dark:text-dark',
     'after:clear-both after:table',
     'sm:ml-0 sm:w-[43%] sm:px-6 sm:py-5',
     textClassName,
@@ -38,14 +38,10 @@ function TimelineItem({ children, className, date, icon, iconClassName, isRight 
     },
   );
 
-  const arrowStyle = clsx(
-    'absolute right-full top-3 h-0 w-0 rotate-180 border-8 border-transparent border-l-gray-d',
-    'dark:border-l-white',
-    {
-      'rotate-180 sm:top-4': isRight,
-      'sm:rotate-0 sm:left-full sm:top-5': !isRight,
-    },
-  );
+  const arrowStyle = clsx('absolute right-full top-3 h-0 w-0 rotate-180 border-8 border-transparent border-l-light', {
+    'rotate-180 sm:top-4': isRight,
+    'sm:rotate-0 sm:left-full sm:top-5': !isRight,
+  });
 
   const dateStyle = clsx(
     'top-0 float-left inline-block pt-3 text-sm font-medium text-gray-300',

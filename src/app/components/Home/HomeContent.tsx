@@ -26,7 +26,7 @@ function HomeContent({ sequence, wrapper }: Props): ReactElement {
       />
 
       <Button
-        className="w-56 border-primary text-primary hover:bg-primary hover:text-white"
+        className="w-56 border-dark text-lg text-dark hover:border-primary hover:bg-primary hover:text-white dark:border-white dark:text-white hover:dark:border-primary"
         text="More About Me"
         onClick={() => scrollIntoView('AboutMe')}
       />
