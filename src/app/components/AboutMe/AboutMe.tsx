@@ -40,7 +40,10 @@ function AboutMe(): ReactElement {
           <li className="border-b border-w-gray-2 py-3 text-dark dark:border-white/10 dark:text-white/80">
             <span className="mr-3 font-semibold">Email:</span>
 
-            <a className="text-primary" href="mailto:w.radduso@gmail.com">
+            <a
+              className="text-dark underline hover:text-primary dark:text-white/80 hover:dark:text-primary"
+              href="mailto:w.radduso@gmail.com"
+            >
               w.radduso@gmail.com
             </a>
           </li>

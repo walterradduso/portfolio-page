@@ -120,7 +120,7 @@ function Skills(): ReactElement {
 
           <div className="flex flex-col gap-2">
             <div className="flex items-center gap-2">
-              <Pill className="">
+              <Pill>
                 <MdLanguage className="ml-0" />
                 English
               </Pill>
@@ -129,7 +129,7 @@ function Skills(): ReactElement {
             </div>
 
             <div className="flex items-center gap-2">
-              <Pill className="">
+              <Pill>
                 <MdLanguage />
                 Spanish
               </Pill>

@@ -1,5 +1,6 @@
 import { ReactElement } from 'react';
 import { FaAddressBook } from 'react-icons/fa';
+import { HiOutlineExternalLink } from 'react-icons/hi';
 
 import { Timeline, TimelineItem } from '@/components/Timeline';
 import { Title } from '@/components/Title';
@@ -15,9 +16,9 @@ function Resume(): ReactElement {
         <TimelineItem date="Sep 2022 - Present" icon={<FaAddressBook />}>
           <h3 className="text-xl font-bold">Sr. Frontend Software Engineer</h3>
 
-          <h4 className="text-base font-bold text-gray-500">
-            <a href="https://www.linkedin.com/company/munditrade/mycompany/" target="_blank">
-              Mundi
+          <h4 className="text-base font-semibold text-gray-500">
+            <a className="flex items-center gap-1 underline" href="https://www.linkedin.com/company/munditrade/mycompany/" target="_blank">
+              Mundi <HiOutlineExternalLink />
             </a>
           </h4>
 
@@ -42,9 +43,9 @@ function Resume(): ReactElement {
         <TimelineItem isRight date="Jan 2022 - Sep 2022" icon={<FaAddressBook />}>
           <h3 className="text-xl font-bold">Software Technical Lead</h3>
 
-          <h4 className="text-base font-bold text-gray-500">
-            <a href="https://www.linkedin.com/company/mercadolibre/" target="_blank">
-              Mercado Libre
+          <h4 className="text-base font-semibold text-gray-500">
+            <a className="flex items-center gap-1 underline" href="https://www.linkedin.com/company/mercadolibre/" target="_blank">
+              Mercado Libre <HiOutlineExternalLink />
             </a>
           </h4>
 
@@ -58,9 +59,9 @@ function Resume(): ReactElement {
         <TimelineItem date="Jan 2021 - Dec 2021" icon={<FaAddressBook />}>
           <h3 className="text-xl font-bold">Sr. Frontend Software Engineer</h3>
 
-          <h4 className="text-base font-bold text-gray-500">
-            <a href="https://www.linkedin.com/company/mercadolibre/" target="_blank">
-              Mercado Libre
+          <h4 className="text-base font-semibold text-gray-500">
+            <a className="flex items-center gap-1 underline" href="https://www.linkedin.com/company/mercadolibre/" target="_blank">
+              Mercado Libre <HiOutlineExternalLink />
             </a>
           </h4>
 
@@ -73,9 +74,9 @@ function Resume(): ReactElement {
         <TimelineItem isRight date="Oct 2019 - Dec 2020" icon={<FaAddressBook />}>
           <h3 className="text-xl font-bold">Ssr. Frontend Software Engineer</h3>
 
-          <h4 className="text-base font-bold text-gray-500">
-            <a href="https://www.linkedin.com/company/mercadolibre/" target="_blank">
-              Mercado Libre
+          <h4 className="text-base font-semibold text-gray-500">
+            <a className="flex items-center gap-1 underline" href="https://www.linkedin.com/company/mercadolibre/" target="_blank">
+              Mercado Libre <HiOutlineExternalLink />
             </a>
           </h4>
 
@@ -88,9 +89,9 @@ function Resume(): ReactElement {
         <TimelineItem date="Jun 2016 - Oct 2019" icon={<FaAddressBook />}>
           <h3 className="text-xl font-bold">Frontend Developer</h3>
 
-          <h4 className="text-base font-bold text-gray-500">
-            <a href="https://www.linkedin.com/company/endeev/" target="_blank">
-              Endeev
+          <h4 className="text-base font-semibold text-gray-500">
+            <a className="flex items-center gap-1 underline" href="https://www.linkedin.com/company/endeev/" target="_blank">
+              Endeev <HiOutlineExternalLink />
             </a>
           </h4>
 
@@ -104,7 +105,7 @@ function Resume(): ReactElement {
         <TimelineItem isRight date="May 2011 - Jun 2016" icon={<FaAddressBook />}>
           <h3 className="text-xl font-bold">Web Developer</h3>
 
-          <h4 className="text-base font-bold text-gray-500">Freelancer / Tecnosan / 1st Outsourcing Choice SRL</h4>
+          <h4 className="text-base font-semibold text-gray-500">Freelancer / Tecnosan / 1st Outsourcing Choice SRL</h4>
 
           <div className="mt-4 text-base">
             <p>
