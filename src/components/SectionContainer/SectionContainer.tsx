@@ -16,7 +16,7 @@ function SectionHoc({ children, className, id }: Props) {
   const { setActiveSection } = useActiveSection();
   const ref = useIntersectionObserver((intersectedId) => setActiveSection(intersectedId));
 
-  const sectionStyles = clsx('relative z-0 min-h-screen', className);
+  const sectionStyles = clsx('relative z-0', className);
 
   return (
     <section ref={ref} className={sectionStyles} id={id}>

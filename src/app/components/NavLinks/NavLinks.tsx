@@ -21,10 +21,6 @@ function NavLinks(): ReactElement {
         <li className="w-full">
           <MenuLink href="Portfolio" label="Portfolio" />
         </li>
-
-        <li className="w-full">
-          <MenuLink href="Contact" label="Contact" />
-        </li>
       </ul>
     </section>
   );

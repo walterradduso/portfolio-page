@@ -1,5 +1,5 @@
+import Image from 'next/image';
 import { ReactElement } from 'react';
-import { FaAddressBook } from 'react-icons/fa';
 import { HiOutlineExternalLink } from 'react-icons/hi';
 
 import { Timeline, TimelineItem } from '@/components/Timeline';
@@ -8,12 +8,16 @@ import { Title } from '@/components/Title';
 import { Skills } from '../Skills';
 
 function Resume(): ReactElement {
+  const renderCompanyLogo = (company: string): ReactElement => {
+    return <Image alt={`${company} Logo`} height={56} src={`/images/companies/${company?.toLowerCase()}.jpeg`} width={56} />;
+  };
+
   return (
     <section className="py-16 font-poppins">
       <Title subText="Resume" text="Summary" />
 
       <Timeline>
-        <TimelineItem date="Sep 2022 - Present" icon={<FaAddressBook />}>
+        <TimelineItem date="Sep 2022 - Present" icon={renderCompanyLogo('Mundi')}>
           <h3 className="text-xl font-bold">Sr. Frontend Software Engineer</h3>
 
           <h4 className="text-base font-semibold text-gray-500">
@@ -40,7 +44,7 @@ function Resume(): ReactElement {
           </div>
         </TimelineItem>
 
-        <TimelineItem isRight date="Jan 2022 - Sep 2022" icon={<FaAddressBook />}>
+        <TimelineItem isRight date="Jan 2022 - Sep 2022" icon={renderCompanyLogo('MercadoLibre')}>
           <h3 className="text-xl font-bold">Software Technical Lead</h3>
 
           <h4 className="text-base font-semibold text-gray-500">
@@ -56,7 +60,7 @@ function Resume(): ReactElement {
           </div>
         </TimelineItem>
 
-        <TimelineItem date="Jan 2021 - Dec 2021" icon={<FaAddressBook />}>
+        <TimelineItem date="Jan 2021 - Dec 2021" icon={renderCompanyLogo('MercadoLibre')}>
           <h3 className="text-xl font-bold">Sr. Frontend Software Engineer</h3>
 
           <h4 className="text-base font-semibold text-gray-500">
@@ -71,7 +75,7 @@ function Resume(): ReactElement {
           </div>
         </TimelineItem>
 
-        <TimelineItem isRight date="Oct 2019 - Dec 2020" icon={<FaAddressBook />}>
+        <TimelineItem isRight date="Oct 2019 - Dec 2020" icon={renderCompanyLogo('MercadoLibre')}>
           <h3 className="text-xl font-bold">Ssr. Frontend Software Engineer</h3>
 
           <h4 className="text-base font-semibold text-gray-500">
@@ -86,7 +90,7 @@ function Resume(): ReactElement {
           </div>
         </TimelineItem>
 
-        <TimelineItem date="Jun 2016 - Oct 2019" icon={<FaAddressBook />}>
+        <TimelineItem date="Jun 2016 - Oct 2019" icon={renderCompanyLogo('Endeev')}>
           <h3 className="text-xl font-bold">Frontend Developer</h3>
 
           <h4 className="text-base font-semibold text-gray-500">
@@ -102,7 +106,7 @@ function Resume(): ReactElement {
           </div>
         </TimelineItem>
 
-        <TimelineItem isRight date="May 2011 - Jun 2016" icon={<FaAddressBook />}>
+        <TimelineItem isRight date="May 2011 - Jun 2016" icon={renderCompanyLogo('WebDev')}>
           <h3 className="text-xl font-bold">Web Developer</h3>
 
           <h4 className="text-base font-semibold text-gray-500">Freelancer / Tecnosan / 1st Outsourcing Choice SRL</h4>

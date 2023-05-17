@@ -19,12 +19,12 @@ async function Portfolio() {
     <section className="py-16 font-poppins">
       <Title subText="My Work" text="Portfolio" />
 
-      <div className="relative columns-1 p-10 font-poppins xs:columns-2 sm:columns-3 md:columns-3 lg:columns-3 xl:columns-4">
+      <div className="relative columns-1 gap-10 p-10 font-poppins xs:columns-2 sm:columns-3 md:columns-3 lg:columns-3 xl:columns-4">
         {repositories.map((repository: UpdatedRepository) => {
           return (
             <div
               key={repository?.id}
-              className="relative mb-8 flex w-full break-inside-avoid flex-col gap-2 overflow-hidden rounded-md bg-primary-light-gray/40 p-4 dark:bg-light"
+              className="relative mb-10 flex w-full break-inside-avoid flex-col gap-2 overflow-hidden rounded-md bg-primary-light-gray/40 p-4 dark:bg-light"
             >
               <h3 className="text-xl font-bold text-dark">{repository?.name}</h3>
 
