@@ -1,7 +1,7 @@
 import { SectionContainer } from '@/components/SectionContainer';
 
 import { AboutMe } from '../AboutMe';
-import { Contact } from '../Contact';
+import { Footer } from '../Footer';
 import { Home } from '../Home';
 import { Portfolio } from '../Portfolio';
 import { Resume } from '../Resume';
@@ -25,9 +25,7 @@ function PageContainer() {
         <Portfolio />
       </SectionContainer>
 
-      <SectionContainer className="bg-primary-light-color dark:bg-primary-dark-color" id="Contact">
-        <Contact />
-      </SectionContainer>
+      <Footer />
     </>
   );
 }

@@ -21,7 +21,7 @@ function TimelineItem({ children, className, date, icon, iconClassName, isRight 
   );
 
   const iconStyle = clsx(
-    'absolute left-0 top-2 flex h-8 w-8 animate-custom-bounce items-center justify-center rounded-full bg-primary text-white shadow-dark-icon-timeline dark:shadow-icon-timeline',
+    'absolute left-0 top-2 flex h-8 w-8 animate-custom-bounce items-center justify-center overflow-hidden rounded-full bg-primary text-white shadow-dark-icon-timeline dark:shadow-icon-timeline',
     'sm:left-1/2 sm:top-0.5 sm:-ml-8 sm:h-14 sm:w-14',
     iconClassName,
   );
