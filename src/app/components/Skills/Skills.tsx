@@ -4,6 +4,8 @@ import { MdLanguage } from 'react-icons/md';
 import { RiBracesFill } from 'react-icons/ri';
 import {
   SiCss3,
+  SiEslint,
+  SiFirebase,
   SiFlutter,
   SiGit,
   SiGithub,
@@ -13,9 +15,13 @@ import {
   SiMongodb,
   SiNextdotjs,
   SiNodedotjs,
+  SiPrettier,
   SiReact,
+  SiRedux,
+  SiSass,
   SiTailwindcss,
   SiTypescript,
+  SiVite,
 } from 'react-icons/si';
 
 import { Pill } from '@/components/Pill';
@@ -48,12 +54,20 @@ function Skills(): ReactElement {
       logo: <SiCss3 />,
     },
     {
+      name: 'Sass',
+      logo: <SiSass />,
+    },
+    {
       name: 'TailwindCSS',
       logo: <SiTailwindcss />,
     },
     {
       name: 'HTML',
       logo: <SiHtml5 />,
+    },
+    {
+      name: 'Redux',
+      logo: <SiRedux />,
     },
     {
       name: 'GraphQL',
@@ -78,6 +92,22 @@ function Skills(): ReactElement {
     {
       name: 'GitHub',
       logo: <SiGithub />,
+    },
+    {
+      name: 'ViteJs',
+      logo: <SiVite />,
+    },
+    {
+      name: 'ESLint',
+      logo: <SiEslint />,
+    },
+    {
+      name: 'Prettier',
+      logo: <SiPrettier />,
+    },
+    {
+      name: 'Firebase',
+      logo: <SiFirebase />,
     },
     {
       name: 'Flutter',

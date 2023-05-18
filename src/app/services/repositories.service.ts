@@ -23,7 +23,8 @@ export const getRepositories = async (): Promise<UpdatedRepository[]> => {
     description: repository?.description,
     url: repository?.html_url,
     language: repository?.language,
-    homePage: repository?.homepage,
+    homepage: repository?.homepage,
+    topics: repository?.topics,
   }));
 
   return repositories;
