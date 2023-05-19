@@ -1,5 +1,6 @@
 import { ReactElement } from 'react';
 
+import { DownloadResume } from '@/components/DownloadResume';
 import { Title } from '@/components/Title';
 
 function AboutMe(): ReactElement {
@@ -32,26 +33,30 @@ function AboutMe(): ReactElement {
           </p>
         </div>
 
-        <ul className="mt-12 w-full font-poppins text-base md:mt-0 md:w-fit">
-          <li className="border-b border-w-gray-2 py-3 text-dark dark:border-white/10 dark:text-white/80">
-            <span className="mr-2 font-semibold">Name:</span> Walter Radduso
-          </li>
+        <div className="mt-12 flex flex-col items-center gap-8">
+          <ul className="w-full font-poppins text-base md:mt-0 md:w-fit">
+            <li className="border-b border-w-gray-2 py-3 text-dark dark:border-white/10 dark:text-white/80">
+              <span className="mr-2 font-semibold">Name:</span> Walter Radduso
+            </li>
 
-          <li className="border-b border-w-gray-2 py-3 text-dark dark:border-white/10 dark:text-white/80">
-            <span className="mr-3 font-semibold">Email:</span>
+            <li className="border-b border-w-gray-2 py-3 text-dark dark:border-white/10 dark:text-white/80">
+              <span className="mr-3 font-semibold">Email:</span>
 
-            <a
-              className="text-dark underline hover:text-primary dark:text-white/80 hover:dark:text-primary"
-              href="mailto:w.radduso@gmail.com"
-            >
-              w.radduso@gmail.com
-            </a>
-          </li>
+              <a
+                className="text-dark underline hover:text-primary dark:text-white/80 hover:dark:text-primary"
+                href="mailto:w.radduso@gmail.com"
+              >
+                w.radduso@gmail.com
+              </a>
+            </li>
 
-          <li className="border-b border-w-gray-2 py-3 text-dark dark:border-white/10 dark:text-white/80">
-            <span className="mr-2 font-semibold">From:</span> Santa Fe, Argentina
-          </li>
-        </ul>
+            <li className="border-b border-w-gray-2 py-3 text-dark dark:border-white/10 dark:text-white/80">
+              <span className="mr-2 font-semibold">From:</span> Santa Fe, Argentina
+            </li>
+          </ul>
+
+          <DownloadResume />
+        </div>
       </div>
     </section>
   );

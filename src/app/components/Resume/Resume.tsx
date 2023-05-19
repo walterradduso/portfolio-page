@@ -2,6 +2,7 @@ import Image from 'next/image';
 import { ReactElement } from 'react';
 import { HiOutlineExternalLink } from 'react-icons/hi';
 
+import { DownloadResume } from '@/components/DownloadResume';
 import { Timeline, TimelineItem } from '@/components/Timeline';
 import { Title } from '@/components/Title';
 
@@ -126,6 +127,10 @@ function Resume(): ReactElement {
       </Timeline>
 
       <Skills />
+
+      <div className="flex justify-center">
+        <DownloadResume />
+      </div>
     </section>
   );
 }

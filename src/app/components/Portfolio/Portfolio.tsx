@@ -5,6 +5,7 @@ import { SiGithub } from 'react-icons/si';
 
 import { UpdatedRepository } from '@/app/models';
 import { getRepositories } from '@/app/services';
+import { DownloadResume } from '@/components/DownloadResume';
 import { Link } from '@/components/Link';
 import { Title } from '@/components/Title';
 import { languageIcon } from '@/constants/languageIcon';
@@ -80,6 +81,10 @@ async function Portfolio() {
             </div>
           );
         })}
+      </div>
+
+      <div className="flex justify-center">
+        <DownloadResume />
       </div>
     </section>
   );

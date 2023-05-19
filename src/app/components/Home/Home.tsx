@@ -3,7 +3,7 @@ import { ReactElement } from 'react';
 import HomeContent from './HomeContent';
 
 function Home(): ReactElement {
-  const sequence = ["I'm Walter Radduso", 3000, "I'm a Frontend Engineer.", 3000, ''];
+  const sequence = ["I'm Walter Radduso", 3000, "I'm a Frontend Engineer", 3000, ''];
 
   return (
     <section className="flex h-screen flex-col items-center justify-center gap-14 font-poppins">
