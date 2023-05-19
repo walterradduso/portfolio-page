@@ -23,6 +23,9 @@ module.exports = {
         'left-enter': 'leftEnter 0.6s',
         'right-enter': 'rightEnter 0.6s',
       },
+      backgroundImage: {
+        'home-bg': "url('/images/homeBg.jpeg')",
+      },
       boxShadow: {
         'dark-icon-timeline': '0 0 0 4px #1f2937',
         'icon-timeline': '0 0 0 4px white',
