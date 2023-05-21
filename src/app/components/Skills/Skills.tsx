@@ -12,6 +12,7 @@ import {
   SiGraphql,
   SiHtml5,
   SiJavascript,
+  SiJest,
   SiMongodb,
   SiNextdotjs,
   SiNodedotjs,
@@ -84,6 +85,10 @@ function Skills(): ReactElement {
     {
       name: 'MySQL',
       logo: <GrMysql />,
+    },
+    {
+      name: 'Jest',
+      logo: <SiJest />,
     },
     {
       name: 'Git',

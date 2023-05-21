@@ -33,7 +33,7 @@ function AboutMe(): ReactElement {
           </p>
         </div>
 
-        <div className="mt-12 flex flex-col items-center gap-8">
+        <div className="mt-12 flex w-full flex-col items-center gap-8 md:w-fit">
           <ul className="w-full font-poppins text-base md:mt-0 md:w-fit">
             <li className="border-b border-w-gray-2 py-3 text-dark dark:border-white/10 dark:text-white/80">
               <span className="mr-2 font-semibold">Name:</span> Walter Radduso

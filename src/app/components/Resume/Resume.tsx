@@ -19,7 +19,7 @@ function Resume(): ReactElement {
 
       <Timeline>
         <TimelineItem date="Sep 2022 - Present" icon={renderCompanyLogo('Mundi')}>
-          <h3 className="text-xl font-bold">Sr. Frontend Software Engineer</h3>
+          <h3 className="text-xl font-bold">SR Frontend Software Engineer</h3>
 
           <h4 className="text-base font-semibold text-gray-500">
             <a className="flex items-center gap-1 underline" href="https://www.linkedin.com/company/munditrade/mycompany/" target="_blank">
@@ -46,7 +46,7 @@ function Resume(): ReactElement {
         </TimelineItem>
 
         <TimelineItem isRight date="Jan 2022 - Sep 2022" icon={renderCompanyLogo('MercadoLibre')}>
-          <h3 className="text-xl font-bold">Software Technical Lead</h3>
+          <h3 className="text-xl font-bold">Tech Lead Frontend</h3>
 
           <h4 className="text-base font-semibold text-gray-500">
             <a className="flex items-center gap-1 underline" href="https://www.linkedin.com/company/mercadolibre/" target="_blank">
@@ -62,7 +62,7 @@ function Resume(): ReactElement {
         </TimelineItem>
 
         <TimelineItem date="Jan 2021 - Dec 2021" icon={renderCompanyLogo('MercadoLibre')}>
-          <h3 className="text-xl font-bold">Sr. Frontend Software Engineer</h3>
+          <h3 className="text-xl font-bold">SR Frontend Software Engineer</h3>
 
           <h4 className="text-base font-semibold text-gray-500">
             <a className="flex items-center gap-1 underline" href="https://www.linkedin.com/company/mercadolibre/" target="_blank">
@@ -77,7 +77,7 @@ function Resume(): ReactElement {
         </TimelineItem>
 
         <TimelineItem isRight date="Oct 2019 - Dec 2020" icon={renderCompanyLogo('MercadoLibre')}>
-          <h3 className="text-xl font-bold">Ssr. Frontend Software Engineer</h3>
+          <h3 className="text-xl font-bold">SSR Frontend Software Engineer</h3>
 
           <h4 className="text-base font-semibold text-gray-500">
             <a className="flex items-center gap-1 underline" href="https://www.linkedin.com/company/mercadolibre/" target="_blank">
@@ -115,7 +115,7 @@ function Resume(): ReactElement {
           <div className="mt-4 text-base">
             <p>
               Created custom and complex WordPress sites, RESTful APIs, and user interfaces for a variety of applications through freelance
-              projects and while working at Tecnosan and 1st Outsourcing Choice SRL..
+              projects and while working at Tecnosan and 1st Outsourcing Choice SRL.
             </p>
             <p>Utilized PHP, HTML, CSS, and JavaScript to create and maintain responsive and visually appealing web applications.</p>
             <p>
