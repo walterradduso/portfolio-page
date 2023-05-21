@@ -24,7 +24,7 @@ function Footer(): ReactElement {
         </li>
       </ul>
 
-      <div className="mt-6 flex items-center justify-center gap-1 text-center font-poppins">
+      <div className="mt-6 flex items-center justify-center gap-1 text-center font-poppins text-white">
         Made with <BsSuitHeartFill className="text-w-red" /> by <span className="font-semibold">Walter Radduso</span> &#169;{' '}
         {new Date().getFullYear()}
       </div>

@@ -17,21 +17,23 @@ interface Props {
 function HomeContent({ sequence, wrapper }: Props): ReactElement {
   return (
     <>
-      <TypeAnimation
-        className="mb-2 text-center font-poppins text-6xl font-semibold text-dark dark:text-white"
-        cursor={true}
-        repeat={Infinity}
-        sequence={sequence}
-        wrapper={wrapper}
-      />
+      <div className="h-20">
+        <TypeAnimation
+          className="mb-2 flex text-center font-poppins text-6xl font-semibold text-white"
+          cursor={true}
+          repeat={Infinity}
+          sequence={sequence}
+          wrapper={wrapper}
+        />
+      </div>
 
       <Button
-        className="w-56 border-dark text-lg text-dark hover:border-primary hover:bg-primary hover:text-white dark:border-white dark:text-white hover:dark:border-primary"
+        className="w-56 border-white text-lg text-white hover:border-primary hover:bg-primary hover:text-white"
         text="More About Me"
         onClick={() => scrollIntoView('AboutMe')}
       />
 
-      <button className="absolute bottom-0 h-12 text-dark hover:text-primary dark:text-white" onClick={() => scrollIntoView('AboutMe')}>
+      <button className="absolute bottom-0 h-12 text-white hover:text-primary" onClick={() => scrollIntoView('AboutMe')}>
         <FaChevronDown className="animate-fade-in-down text-xl" />
       </button>
     </>

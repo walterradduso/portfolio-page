@@ -6,6 +6,7 @@ export interface Repository {
   description: string;
   homepage: string;
   language: string;
+  topics: string[];
 }
 
 export interface UpdatedRepository {
@@ -16,4 +17,5 @@ export interface UpdatedRepository {
   description: string;
   homepage: string;
   language: string;
+  topics: string[];
 }

@@ -9,7 +9,7 @@ import { Resume } from '../Resume';
 function PageContainer() {
   return (
     <>
-      <SectionContainer className="bg-primary-light-color dark:bg-primary-dark-color" id="Home">
+      <SectionContainer className="bg-primary-dark-color" id="Home">
         <Home />
       </SectionContainer>
 
