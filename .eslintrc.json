@@ -1,6 +1,12 @@
 {
   "root": true,
-  "extends": ["airbnb-typescript/base", "eslint:recommended", "next/core-web-vitals", "plugin:prettier/recommended"],
+  "extends": [
+    "airbnb-typescript/base",
+    "eslint:recommended",
+    "next/core-web-vitals",
+    "plugin:prettier/recommended",
+    "plugin:tailwindcss/recommended"
+  ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaVersion": "latest",
@@ -10,7 +16,7 @@
   "env": {
     "jest": true
   },
-  "plugins": ["@typescript-eslint", "import", "prettier", "react", "react-hooks"],
+  "plugins": ["@typescript-eslint", "import", "prettier", "react", "react-hooks", "tailwindcss"],
   "rules": {
     "import/extensions": [
       "error",
