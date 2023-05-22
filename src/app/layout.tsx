@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react';
 import { ReactNode } from 'react';
 
 import { Providers as ThemeProvider } from '@/contexts/Theme';
@@ -20,6 +21,8 @@ export default function RootLayout({ children }: Props) {
     <html lang="en">
       <body>
         <ThemeProvider>{children}</ThemeProvider>
+
+        <Analytics />
       </body>
     </html>
   );
