@@ -51,12 +51,13 @@ module.exports = {
         secondary: '#04b4e0',
       },
       fontFamily: {
-        montserrat: ['Montserrat', 'sans-serif'],
-        poppins: ['Poppins', 'sans-serif'],
-        quicksand: ['Quicksand', 'sans-serif'],
+        poppins: ['var(--font-poppins)'],
       },
       fontSize: {
         'fluid-title': 'calc(1.95rem + 8.4vw)',
+      },
+      minHeight: {
+        20: '5rem',
       },
       keyframes: {
         customBounce: {

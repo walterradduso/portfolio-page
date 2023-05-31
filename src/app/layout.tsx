@@ -2,6 +2,9 @@ import { Analytics } from '@vercel/analytics/react';
 import { ReactNode } from 'react';
 
 import { Providers as ThemeProvider } from '@/contexts/Theme';
+
+import { poppins } from './fonts';
+
 import '@/styles/globals.css';
 
 export const metadata = {
@@ -18,7 +21,7 @@ interface Props {
 
 export default function RootLayout({ children }: Props) {
   return (
-    <html lang="en">
+    <html className={poppins.variable} lang="en">
       <body>
         <ThemeProvider>{children}</ThemeProvider>
 
