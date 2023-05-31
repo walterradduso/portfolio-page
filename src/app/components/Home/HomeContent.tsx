@@ -17,9 +17,9 @@ interface Props {
 function HomeContent({ sequence, wrapper }: Props): ReactElement {
   return (
     <>
-      <div className="h-20">
+      <div className="flex min-h-20 items-center justify-center">
         <TypeAnimation
-          className="mb-2 flex text-center font-poppins text-6xl font-semibold text-white"
+          className="mb-2 flex text-center font-poppins text-5xl font-semibold text-white sm:text-6xl"
           cursor={true}
           repeat={Infinity}
           sequence={sequence}
