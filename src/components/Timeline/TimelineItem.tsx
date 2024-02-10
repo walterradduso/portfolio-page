@@ -8,10 +8,20 @@ interface Props {
   icon: ReactNode | null;
   iconClassName?: string;
   isRight?: boolean;
+  monthPasses?: string;
   textClassName?: string;
 }
 
-function TimelineItem({ children, className, date, icon, iconClassName, isRight = false, textClassName }: Props): ReactElement {
+function TimelineItem({
+  children,
+  className,
+  date,
+  icon,
+  iconClassName,
+  isRight = false,
+  monthPasses,
+  textClassName,
+}: Props): ReactElement {
   const timelineItemStyle = clsx(
     'relative mx-0 my-8 text-black',
     'after:clear-both after:table',
@@ -21,8 +31,8 @@ function TimelineItem({ children, className, date, icon, iconClassName, isRight 
   );
 
   const iconStyle = clsx(
-    'absolute left-0 top-2 flex h-8 w-8 animate-custom-bounce items-center justify-center overflow-hidden rounded-full bg-primary text-white shadow-dark-icon-timeline dark:shadow-icon-timeline',
-    'sm:left-1/2 sm:top-0.5 sm:-ml-8 sm:h-14 sm:w-14',
+    'absolute left-0 top-2 flex size-8 animate-custom-bounce items-center justify-center overflow-hidden rounded-full bg-primary text-white shadow-dark-icon-timeline dark:shadow-icon-timeline',
+    'sm:left-1/2 sm:top-0.5 sm:-ml-8 sm:size-14',
     iconClassName,
   );
 
@@ -38,7 +48,7 @@ function TimelineItem({ children, className, date, icon, iconClassName, isRight 
     },
   );
 
-  const arrowStyle = clsx('absolute right-full top-3 h-0 w-0 rotate-180 border-8 border-transparent border-l-light', {
+  const arrowStyle = clsx('absolute right-full top-3 size-0 rotate-180 border-8 border-transparent border-l-light', {
     'rotate-180 sm:top-4': isRight,
     'sm:rotate-0 sm:left-full sm:top-5': !isRight,
   });
@@ -62,7 +72,9 @@ function TimelineItem({ children, className, date, icon, iconClassName, isRight 
 
         {children}
 
-        <span className={dateStyle}>{date}</span>
+        <span className={dateStyle}>
+          {date} ({monthPasses})
+        </span>
       </div>
     </div>
   );
