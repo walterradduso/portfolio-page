@@ -30,7 +30,7 @@ function NavBurger(): ReactElement {
 
   return (
     <>
-      <button className="relative mr-2 block h-10 w-10 focus:outline-none md:hidden" onClick={() => setIsOpen(!isOpen)}>
+      <button className="relative mr-2 block size-10 focus:outline-none md:hidden" onClick={() => setIsOpen(!isOpen)}>
         <div className="absolute left-1/2 top-1/2 block w-6 -translate-x-1/2 -translate-y-1/2 rounded-md">
           <span aria-hidden="true" className={firstLine} />
           <span aria-hidden="true" className={secondLine} />

@@ -14,7 +14,9 @@
     "project": "./tsconfig.json"
   },
   "env": {
-    "jest": true
+    "browser": true,
+    "es2022": true,
+    "node": true
   },
   "plugins": ["@typescript-eslint", "import", "prettier", "react", "react-hooks", "tailwindcss"],
   "rules": {
