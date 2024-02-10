@@ -1,8 +1,13 @@
 {
   "name": "portfolio-page",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "private": true,
-  "author": "Walter Radduso",
+  "author": {
+    "name": "Walter Radduso",
+    "email": "w.radduso@gmail.com",
+    "url": "https://walterradduso.dev"
+  },
+  "homepage": "https://walterradduso.dev",
   "license": "ISC",
   "scripts": {
     "build": "next build",
