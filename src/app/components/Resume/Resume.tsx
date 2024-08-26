@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import { ReactElement } from 'react';
 import { HiOutlineExternalLink } from 'react-icons/hi';
 
@@ -7,13 +6,10 @@ import { Timeline, TimelineItem } from '@/components/Timeline';
 import { Title } from '@/components/Title';
 import { monthsPassed } from '@/utils/monthPasses';
 
+import { RenderCompanyLogo } from '../RenderCompanyLogo';
 import { Skills } from '../Skills';
 
 function Resume(): ReactElement {
-  const renderCompanyLogo = (company: string): ReactElement => {
-    return <Image alt={`${company} Logo`} height={56} src={`/images/companies/${company?.toLowerCase()}.jpeg`} width={56} />;
-  };
-
   const currentDate: Date = new Date();
   const currentYear: number = currentDate.getFullYear();
   const currentMonth: string = currentDate.toLocaleDateString('en-US', { month: 'short' });
@@ -26,7 +22,7 @@ function Resume(): ReactElement {
         <TimelineItem
           isRight
           date="Oct 2023 - Present"
-          icon={renderCompanyLogo('Deel')}
+          icon={<RenderCompanyLogo company="Deel" />}
           monthPasses={monthsPassed('Oct', 2023, currentMonth, currentYear)}
         >
           <h3 className="text-xl font-bold">SR Frontend Engineer</h3>
@@ -46,7 +42,11 @@ function Resume(): ReactElement {
           </div>
         </TimelineItem>
 
-        <TimelineItem date="Nov 2022 - Oct 2023" icon={renderCompanyLogo('Mundi')} monthPasses={monthsPassed('Nov', 2022, 'Oct', 2023)}>
+        <TimelineItem
+          date="Nov 2022 - Oct 2023"
+          icon={<RenderCompanyLogo company="Mundi" />}
+          monthPasses={monthsPassed('Nov', 2022, 'Oct', 2023)}
+        >
           <h3 className="text-xl font-bold">SR Frontend Software Engineer</h3>
 
           <h4 className="text-base font-semibold text-gray-500">
@@ -76,7 +76,7 @@ function Resume(): ReactElement {
         <TimelineItem
           isRight
           date="Jan 2022 - Nov 2022"
-          icon={renderCompanyLogo('MercadoLibre')}
+          icon={<RenderCompanyLogo company="MercadoLibre" />}
           monthPasses={monthsPassed('Jan', 2022, 'Nov', 2022)}
         >
           <h3 className="text-xl font-bold">Tech Lead Frontend</h3>
@@ -96,7 +96,7 @@ function Resume(): ReactElement {
 
         <TimelineItem
           date="Jan 2021 - Dec 2021"
-          icon={renderCompanyLogo('MercadoLibre')}
+          icon={<RenderCompanyLogo company="MercadoLibre" />}
           monthPasses={monthsPassed('Jan', 2021, 'Dec', 2021)}
         >
           <h3 className="text-xl font-bold">SR Frontend Software Engineer</h3>
@@ -116,7 +116,7 @@ function Resume(): ReactElement {
         <TimelineItem
           isRight
           date="Oct 2019 - Dec 2020"
-          icon={renderCompanyLogo('MercadoLibre')}
+          icon={<RenderCompanyLogo company="MercadoLibre" />}
           monthPasses={monthsPassed('Oct', 2019, 'Dec', 2020)}
         >
           <h3 className="text-xl font-bold">SSR Frontend Software Engineer</h3>
@@ -133,7 +133,11 @@ function Resume(): ReactElement {
           </div>
         </TimelineItem>
 
-        <TimelineItem date="Jun 2016 - Oct 2019" icon={renderCompanyLogo('Endeev')} monthPasses={monthsPassed('Jun', 2016, 'Oct', 2019)}>
+        <TimelineItem
+          date="Jun 2016 - Oct 2019"
+          icon={<RenderCompanyLogo company="Endeev" />}
+          monthPasses={monthsPassed('Jun', 2016, 'Oct', 2019)}
+        >
           <h3 className="text-xl font-bold">Frontend Developer</h3>
 
           <h4 className="text-base font-semibold text-gray-500">
@@ -152,7 +156,7 @@ function Resume(): ReactElement {
         <TimelineItem
           isRight
           date="May 2011 - Jun 2016"
-          icon={renderCompanyLogo('WebDev')}
+          icon={<RenderCompanyLogo company="WebDev" />}
           monthPasses={monthsPassed('May', 2011, 'Jun', 2016)}
         >
           <h3 className="text-xl font-bold">Web Developer</h3>
