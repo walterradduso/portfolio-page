@@ -7,6 +7,9 @@
     "plugin:prettier/recommended",
     "plugin:tailwindcss/recommended"
   ],
+  "globals": {
+    "JSX": true
+  },
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaVersion": "latest",
@@ -18,7 +21,7 @@
     "es2022": true,
     "node": true
   },
-  "plugins": ["@typescript-eslint", "import", "prettier", "react", "react-hooks", "tailwindcss"],
+  "plugins": ["@typescript-eslint", "import", "prettier", "react", "tailwindcss"],
   "rules": {
     "import/extensions": [
       "error",
@@ -27,14 +30,16 @@
         "js": "never",
         "jsx": "never",
         "ts": "never",
-        "tsx": "never"
+        "tsx": "never",
+        "": "never"
       }
     ],
+    "import/no-cycle": ["error", { "maxDepth": 1 }],
     "import/no-extraneous-dependencies": "off",
     "import/prefer-default-export": "off",
     "no-console": "warn",
     "react/button-has-type": "off",
-    "react-hooks/rules-of-hooks": "off",
+    "react/display-name": "off",
     "react/jsx-filename-extension": [
       1,
       {
@@ -45,6 +50,9 @@
     "react/prop-types": "off",
     "react/react-in-jsx-scope": "off",
     "react/self-closing-comp": "warn",
+    "react-hooks/exhaustive-deps": "off",
+    "react-hooks/rules-of-hooks": "error",
+    "tailwindcss/no-custom-classname": "off",
     "prettier/prettier": [
       "error",
       {
@@ -91,7 +99,8 @@
         "callbacksLast": true,
         "noSortAlphabetically": false,
         "reservedFirst": true,
-        "shorthandFirst": true
+        "shorthandFirst": true,
+        "locale": "auto"
       }
     ],
     "padding-line-between-statements": [
@@ -112,10 +121,5 @@
         "next": ["const", "let", "var"]
       }
     ]
-  },
-  "settings": {
-    "react": {
-      "version": "detect"
-    }
   }
 }
