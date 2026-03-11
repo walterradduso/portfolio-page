@@ -1,11 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    './app/**/*.{js,ts,jsx,tsx,mdx}',
-    './pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './components/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/**/*.{js,ts,jsx,tsx,mdx}',
-  ],
+  content: ['./src/**/*.{js,ts,jsx,tsx,mdx}'],
   darkMode: 'class',
   theme: {
     screens: {
@@ -23,9 +18,7 @@ module.exports = {
         'left-enter': 'leftEnter 0.6s',
         'right-enter': 'rightEnter 0.6s',
       },
-      backgroundImage: {
-        'home-bg': "url('/images/homeBg.jpeg')",
-      },
+      backgroundImage: {},
       boxShadow: {
         'dark-icon-timeline': '0 0 0 4px #1f2937',
         'icon-timeline': '0 0 0 4px white',
@@ -47,7 +40,8 @@ module.exports = {
         'w-white': '#111418',
         dark: '#333333',
         light: '#f5f5f5',
-        primary: '#4B84E0',
+        primary: '#2F68BE',
+        'primary-light': '#6B9CE8',
         secondary: '#04b4e0',
       },
       fontFamily: {

@@ -21,6 +21,7 @@ function ThemeSwitcher() {
 
   return (
     <button
+      aria-label={currentTheme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
       className="cursor-pointer text-base text-white hover:text-primary"
       onClick={() => setTheme(currentTheme === 'dark' ? 'light' : 'dark')}
     >

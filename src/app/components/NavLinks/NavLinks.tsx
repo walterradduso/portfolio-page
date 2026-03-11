@@ -1,26 +1,17 @@
 import { ReactElement } from 'react';
 
 import { MenuLink } from '@/components/MenuLink';
+import { NAVIGATION_ITEMS } from '@/constants/navigationItems';
 
 function NavLinks(): ReactElement {
   return (
     <section className="hidden w-full text-center md:block">
       <ul className="flex flex-col items-center justify-center py-4">
-        <li className="w-full">
-          <MenuLink href="Home" label="Home" />
-        </li>
-
-        <li className="w-full">
-          <MenuLink href="AboutMe" label="About Me" />
-        </li>
-
-        <li className="w-full">
-          <MenuLink href="Resume" label="Resume" />
-        </li>
-
-        <li className="w-full">
-          <MenuLink href="Portfolio" label="Portfolio" />
-        </li>
+        {NAVIGATION_ITEMS.map((item) => (
+          <li key={item.href} className="w-full">
+            <MenuLink href={item.href} label={item.label} />
+          </li>
+        ))}
       </ul>
     </section>
   );

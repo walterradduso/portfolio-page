@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git -C /Users/walterradduso/Workspace/portfolio-page log --oneline -10)",
+      "Bash(git config:*)",
+      "Bash(git show-ref:*)",
+      "Bash(pnpm --version 2>/dev/null || npm --version)",
+      "Bash(pnpm outdated:*)",
+      "Bash(pnpm install:*)",
+      "Bash(pnpm build:*)",
+      "Bash(node -e \"const si = require\\('react-icons/si'\\); console.log\\('SiCss3:', !!si.SiCss3\\); console.log\\('SiCss:', !!si.SiCss\\); console.log\\('SiHtml5:', !!si.SiHtml5\\); console.log\\('SiHtml:', !!si.SiHtml\\);\" 2>&1)",
+      "Bash(node -e 'const si = require\\(\"react-icons/si\"\\); console.log\\(\"SiCss3:\", !!si.SiCss3\\); console.log\\(\"SiCss:\", !!si.SiCss\\); console.log\\(\"SiHtml5:\", !!si.SiHtml5\\); console.log\\(\"SiHtml:\", !!si.SiHtml\\);' 2>&1)",
+      "Bash(pnpm lint:*)",
+      "Bash(pnpm prettier-format:*)"
+    ]
+  }
+}

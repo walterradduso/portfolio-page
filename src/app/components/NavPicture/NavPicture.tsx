@@ -6,7 +6,7 @@ function NavPicture(): ReactElement {
     <section>
       <a className="mt-0 hidden flex-col items-center justify-center gap-2 md:mt-10 md:flex" href="/">
         <div className="flex size-44 items-center justify-center rounded-full bg-w-gray">
-          <Image alt="Walter's Picture" className="rounded-full" height={160} src="/images/walPic.png" width={160} />
+          <Image alt="Walter's Picture" className="rounded-full" height={160} src="/images/walPic.jpeg" width={160} />
         </div>
 
         <h1 className="text-xl text-primary-light-color">Walter Radduso</h1>

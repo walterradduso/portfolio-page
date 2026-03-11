@@ -1,27 +1,25 @@
 import { ReactElement } from 'react';
 import { BsGithub, BsLinkedin, BsSuitHeartFill, BsTwitter } from 'react-icons/bs';
 
+import { SOCIAL_LINKS } from '@/constants/socialLinks';
+
+const iconMap = {
+  BsLinkedin: <BsLinkedin />,
+  BsGithub: <BsGithub />,
+  BsTwitter: <BsTwitter />,
+};
+
 function Footer(): ReactElement {
   return (
     <section className="bg-dark py-12 font-poppins">
       <ul className="flex items-center justify-center gap-12">
-        <li className="text-2xl text-primary-light-color hover:text-primary">
-          <a href="https://www.linkedin.com/in/walterradduso/" rel="noreferrer" target="_blank">
-            <BsLinkedin />
-          </a>
-        </li>
-
-        <li className="text-2xl text-primary-light-color hover:text-primary">
-          <a href="https://github.com/walterradduso" rel="noreferrer" target="_blank">
-            <BsGithub />
-          </a>
-        </li>
-
-        <li className="text-2xl text-primary-light-color hover:text-primary">
-          <a href="https://twitter.com/walterradduso" rel="noreferrer" target="_blank">
-            <BsTwitter />
-          </a>
-        </li>
+        {SOCIAL_LINKS.map((link) => (
+          <li key={link.label} className="text-2xl text-primary-light-color hover:text-primary">
+            <a aria-label={link.label} href={link.href} rel="noopener noreferrer" target="_blank">
+              {iconMap[link.icon]}
+            </a>
+          </li>
+        ))}
       </ul>
 
       <div className="mt-6 flex items-center justify-center gap-1 text-center font-poppins text-white">

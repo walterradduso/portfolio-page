@@ -4,6 +4,7 @@ import clsx from 'clsx';
 import { ReactElement, useState } from 'react';
 
 import { MenuLink } from '@/components/MenuLink';
+import { NAVIGATION_ITEMS } from '@/constants/navigationItems';
 
 function NavBurger(): ReactElement {
   const [isOpen, setIsOpen] = useState(false);
@@ -30,7 +31,12 @@ function NavBurger(): ReactElement {
 
   return (
     <>
-      <button className="relative mr-2 block size-10 focus:outline-none md:hidden" onClick={() => setIsOpen(!isOpen)}>
+      <button
+        aria-expanded={isOpen}
+        aria-label="Toggle navigation menu"
+        className="relative mr-2 block size-10 focus:outline-none md:hidden"
+        onClick={() => setIsOpen(!isOpen)}
+      >
         <div className="absolute left-1/2 top-1/2 block w-6 -translate-x-1/2 -translate-y-1/2 rounded-md">
           <span aria-hidden="true" className={firstLine} />
           <span aria-hidden="true" className={secondLine} />
@@ -40,21 +46,11 @@ function NavBurger(): ReactElement {
 
       <section className={menuStyles}>
         <ul className="flex flex-col items-center justify-center py-4">
-          <li className="w-full border-b border-w-light-white">
-            <MenuLink href="Home" label="Home" />
-          </li>
-
-          <li className="w-full border-b border-w-light-white">
-            <MenuLink href="AboutMe" label="About Me" />
-          </li>
-
-          <li className="w-full border-b border-w-light-white">
-            <MenuLink href="Resume" label="Resume" />
-          </li>
-
-          <li className="w-full border-b border-w-light-white">
-            <MenuLink href="Portfolio" label="Portfolio" />
-          </li>
+          {NAVIGATION_ITEMS.map((item) => (
+            <li key={item.href} className="w-full border-b border-w-light-white">
+              <MenuLink href={item.href} label={item.label} />
+            </li>
+          ))}
         </ul>
       </section>
     </>

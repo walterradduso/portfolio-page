@@ -33,7 +33,11 @@ function HomeContent({ sequence, wrapper }: Props): ReactElement {
         onClick={() => scrollIntoView('AboutMe')}
       />
 
-      <button className="absolute bottom-0 h-12 text-white hover:text-primary" onClick={() => scrollIntoView('AboutMe')}>
+      <button
+        aria-label="Scroll to About Me"
+        className="absolute bottom-0 h-12 text-white hover:text-primary"
+        onClick={() => scrollIntoView('AboutMe')}
+      >
         <FaChevronDown className="animate-fade-in-down text-xl" />
       </button>
     </>

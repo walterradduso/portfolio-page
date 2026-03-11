@@ -1,10 +1,13 @@
+import dynamic from 'next/dynamic';
+
 import { SectionContainer } from '@/components/SectionContainer';
 
-import { AboutMe } from '../AboutMe';
-import { Footer } from '../Footer';
 import { Home } from '../Home';
-import { Portfolio } from '../Portfolio';
-import { Resume } from '../Resume';
+
+const AboutMe = dynamic(() => import('../AboutMe/AboutMe'));
+const Resume = dynamic(() => import('../Resume/Resume'));
+const Portfolio = dynamic(() => import('../Portfolio/Portfolio'));
+const Footer = dynamic(() => import('../Footer/Footer'));
 
 function PageContainer() {
   return (

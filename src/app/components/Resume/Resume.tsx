@@ -12,7 +12,9 @@ import { Skills } from '../Skills';
 function Resume(): ReactElement {
   const currentDate: Date = new Date();
   const currentYear: number = currentDate.getFullYear();
-  const currentMonth: string = currentDate.toLocaleDateString('en-US', { month: 'short' });
+  const currentMonth: string = currentDate.toLocaleDateString('en-US', {
+    month: 'short',
+  });
 
   return (
     <section className="py-16 font-poppins">
@@ -21,28 +23,57 @@ function Resume(): ReactElement {
       <Timeline>
         <TimelineItem
           isRight
-          date="Oct 2023 - Present"
-          icon={<RenderCompanyLogo company="Deel" />}
-          monthPasses={monthsPassed('Oct', 2023, currentMonth, currentYear)}
+          date="Jan 2025 - Present"
+          icon={<RenderCompanyLogo company="Nullplatform" />}
+          monthPasses={monthsPassed('Jan', 2025, currentMonth, currentYear)}
         >
           <h3 className="text-xl font-bold">SR Frontend Engineer</h3>
 
           <h4 className="text-base font-semibold text-gray-500">
-            <a className="flex items-center gap-1 underline" href="https://www.linkedin.com/company/deel/mycompany/" target="_blank">
-              Deel <HiOutlineExternalLink />
+            <a className="flex items-center gap-1 underline" href="https://www.linkedin.com/company/nullplatform/" target="_blank">
+              Nullplatform <HiOutlineExternalLink />
             </a>
           </h4>
 
           <div className="mt-4 text-base">
-            <p>Contributed to frontend development projects, focusing on delivering high-quality user experiences.</p>
             <p>
-              Engaged in comprehensive code reviews, played a key role in the implementation of new features, and collaborated effectively
-              with backend teams to optimize project results.
+              Working on the frontend architecture across multiple applications using a micro-frontend approach, focusing on scalability and
+              consistency throughout the platform.
+            </p>
+            <p>
+              Responsible for the development and maintenance of a gateway service that connects frontend modules with backend services.
+            </p>
+            <p>
+              Contributing to the integration of AI-powered features into the platform, improving the developer experience and building
+              automation tools.
             </p>
           </div>
         </TimelineItem>
 
         <TimelineItem
+          date="Oct 2023 - Dec 2024"
+          icon={<RenderCompanyLogo company="Deel" />}
+          monthPasses={monthsPassed('Oct', 2023, 'Dec', 2024)}
+        >
+          <h3 className="text-xl font-bold">SR Frontend Engineer</h3>
+
+          <h4 className="text-base font-semibold text-gray-500">
+            <a className="flex items-center gap-1 underline" href="https://www.linkedin.com/company/deel/" target="_blank">
+              Deel <HiOutlineExternalLink />
+            </a>
+          </h4>
+
+          <div className="mt-4 text-base">
+            <p>Worked on frontend development projects focused on delivering high-quality user experiences.</p>
+            <p>
+              Took part in code reviews, helped implement new features, and collaborated closely with backend teams to improve project
+              outcomes.
+            </p>
+          </div>
+        </TimelineItem>
+
+        <TimelineItem
+          isRight
           date="Nov 2022 - Oct 2023"
           icon={<RenderCompanyLogo company="Mundi" />}
           monthPasses={monthsPassed('Nov', 2022, 'Oct', 2023)}
@@ -50,31 +81,29 @@ function Resume(): ReactElement {
           <h3 className="text-xl font-bold">SR Frontend Software Engineer</h3>
 
           <h4 className="text-base font-semibold text-gray-500">
-            <a className="flex items-center gap-1 underline" href="https://www.linkedin.com/company/munditrade/mycompany/" target="_blank">
+            <a className="flex items-center gap-1 underline" href="https://www.linkedin.com/company/munditrade/" target="_blank">
               Mundi <HiOutlineExternalLink />
             </a>
           </h4>
 
           <div className="mt-4 text-base">
-            <p>Work on frontend development projects using cutting-edge technologies.</p>
-            <p>Work closely with cross-functional teams to ensure seamless integration and alignment with project goals.</p>
+            <p>Worked on frontend development projects using modern technologies.</p>
+            <p>Worked closely with cross-functional teams to ensure smooth integration and alignment with project goals.</p>
 
-            <p className="mt-2">Some responsibilities include:</p>
+            <p className="mt-2">Some responsibilities included:</p>
 
             <ul className="ml-5 list-disc">
               <li>Performing code reviews.</li>
-              <li>Maintaining, optimizing, and enhancing current projects.</li>
+              <li>Maintaining, optimizing, and enhancing existing projects.</li>
               <li>Implementing new features and procedures.</li>
-              <li>Working with the backend team.</li>
-              <li>Add unit tests.</li>
-              <li>Improve performance.</li>
-              <li>Perform various other tasks as needed.</li>
+              <li>Collaborating with the backend team.</li>
+              <li>Adding unit tests.</li>
+              <li>Improving performance.</li>
             </ul>
           </div>
         </TimelineItem>
 
         <TimelineItem
-          isRight
           date="Jan 2022 - Nov 2022"
           icon={<RenderCompanyLogo company="MercadoLibre" />}
           monthPasses={monthsPassed('Jan', 2022, 'Nov', 2022)}
@@ -89,12 +118,13 @@ function Resume(): ReactElement {
 
           <div className="mt-4 text-base">
             <p>Oversaw frontend development for multiple initiatives, using React and NodeJS as core technologies.</p>
-            <p>Embraced a dynamic role, performing a wide variety of tasks in multiple environments.</p>
-            <p>Maintained a strong understanding of current industry trends and emerging technologies to stay ahead of the competition.</p>
+            <p>Took on a versatile role, handling a wide range of tasks across different environments.</p>
+            <p>Kept up with industry trends and emerging technologies to bring fresh ideas into the team.</p>
           </div>
         </TimelineItem>
 
         <TimelineItem
+          isRight
           date="Jan 2021 - Dec 2021"
           icon={<RenderCompanyLogo company="MercadoLibre" />}
           monthPasses={monthsPassed('Jan', 2021, 'Dec', 2021)}
@@ -108,13 +138,12 @@ function Resume(): ReactElement {
           </h4>
 
           <div className="mt-4 text-base">
-            <p>Worked with cross-functional teams to drive front-end development projects and ensure alignment with project goals.</p>
+            <p>Worked with cross-functional teams to drive frontend development projects and ensure alignment with project goals.</p>
             <p>Actively participated in code reviews and helped optimize and improve existing projects.</p>
           </div>
         </TimelineItem>
 
         <TimelineItem
-          isRight
           date="Oct 2019 - Dec 2020"
           icon={<RenderCompanyLogo company="MercadoLibre" />}
           monthPasses={monthsPassed('Oct', 2019, 'Dec', 2020)}
@@ -134,6 +163,7 @@ function Resume(): ReactElement {
         </TimelineItem>
 
         <TimelineItem
+          isRight
           date="Jun 2016 - Oct 2019"
           icon={<RenderCompanyLogo company="Endeev" />}
           monthPasses={monthsPassed('Jun', 2016, 'Oct', 2019)}
@@ -149,12 +179,11 @@ function Resume(): ReactElement {
           <div className="mt-4 text-base">
             <p>Managed the frontend development of a web application using HTML, CSS, and React.</p>
             <p>Developed mobile applications using React Native and contributed to the creation of a RESTful API using NodeJS.</p>
-            <p>Collaborated with product managers to design innovative features and validate project requirements.</p>
+            <p>Collaborated with product managers to design new features and validate project requirements.</p>
           </div>
         </TimelineItem>
 
         <TimelineItem
-          isRight
           date="May 2011 - Jun 2016"
           icon={<RenderCompanyLogo company="WebDev" />}
           monthPasses={monthsPassed('May', 2011, 'Jun', 2016)}
@@ -165,10 +194,10 @@ function Resume(): ReactElement {
 
           <div className="mt-4 text-base">
             <p>
-              Created custom and complex WordPress sites, RESTful APIs, and user interfaces for a variety of applications through freelance
-              projects and while working at Tecnosan and 1st Outsourcing Choice SRL.
+              Built custom WordPress sites, RESTful APIs, and user interfaces for various applications through freelance projects and while
+              working at Tecnosan and 1st Outsourcing Choice SRL.
             </p>
-            <p>Utilized PHP, HTML, CSS, and JavaScript to create and maintain responsive and visually appealing web applications.</p>
+            <p>Used PHP, HTML, CSS, and JavaScript to create and maintain responsive web applications.</p>
             <p>
               Developed a local e-commerce platform for users in San Justo, Santa Fe, and surrounding areas, allowing them to easily upload
               and sell products.

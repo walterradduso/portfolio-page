@@ -1,6 +1,6 @@
 import {
   SiAstro,
-  SiCss3,
+  SiCss,
   SiElectron,
   SiEslint,
   SiFirebase,
@@ -21,7 +21,7 @@ export const languageIcon = (iconId: string) => {
     case 'astro':
       return <SiAstro />;
     case 'css':
-      return <SiCss3 />;
+      return <SiCss />;
     case 'electron':
       return <SiElectron />;
     case 'eslint':
