@@ -7,9 +7,10 @@ import { RiMoonFill } from 'react-icons/ri';
 
 function ThemeSwitcher() {
   const [mounted, setMounted] = useState(false);
-  const { setTheme, systemTheme, theme } = useTheme();
+  const { resolvedTheme, setTheme } = useTheme();
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- next-themes hydration guard
     setMounted(true);
   }, []);
 
@@ -17,15 +18,15 @@ function ThemeSwitcher() {
     return null;
   }
 
-  const currentTheme = theme === 'system' ? systemTheme : theme;
+  const isDark = resolvedTheme === 'dark';
 
   return (
     <button
-      aria-label={currentTheme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
-      className="cursor-pointer text-base text-white hover:text-primary"
-      onClick={() => setTheme(currentTheme === 'dark' ? 'light' : 'dark')}
+      aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
+      className="hover:text-primary inline-flex cursor-pointer items-center text-sm"
+      onClick={() => setTheme(isDark ? 'light' : 'dark')}
     >
-      {currentTheme === 'dark' ? <BsSunFill /> : <RiMoonFill />}
+      {isDark ? <BsSunFill /> : <RiMoonFill />}
     </button>
   );
 }

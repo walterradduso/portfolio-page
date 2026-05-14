@@ -17,7 +17,7 @@ function Resume(): ReactElement {
   });
 
   return (
-    <section className="py-16 font-poppins">
+    <section className="font-poppins py-16">
       <Title subText="Resume" text="Summary" />
 
       <Timeline>

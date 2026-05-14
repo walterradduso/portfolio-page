@@ -7,7 +7,7 @@ function Home(): ReactElement {
   const sequence = ["I'm Walter Radduso", 3000, "I'm a Frontend Engineer", 3000, ''];
 
   return (
-    <section className="flex h-screen flex-col items-center justify-center gap-14 font-poppins">
+    <section className="font-poppins flex h-screen flex-col items-center justify-center gap-14">
       <h1 className="text-3xl text-white">Welcome</h1>
 
       <HomeContent sequence={sequence} wrapper="span" />

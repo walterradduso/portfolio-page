@@ -9,20 +9,20 @@ import { NAVIGATION_ITEMS } from '@/constants/navigationItems';
 function NavBurger(): ReactElement {
   const [isOpen, setIsOpen] = useState(false);
 
-  const firstLine = clsx('absolute block h-0.5 w-6 bg-primary-light-color transition duration-500 ease-in-out', {
+  const firstLine = clsx('bg-primary-light-color absolute block h-0.5 w-6 transition duration-500 ease-in-out', {
     'rotate-45': isOpen,
     '-translate-y-1.5': !isOpen,
   });
-  const secondLine = clsx('absolute block h-0.5 w-6 bg-primary-light-color transition duration-500 ease-in-out', {
+  const secondLine = clsx('bg-primary-light-color absolute block h-0.5 w-6 transition duration-500 ease-in-out', {
     'opacity-0': isOpen,
   });
-  const thirdLine = clsx('absolute block h-0.5 w-6 bg-primary-light-color transition duration-500 ease-in-out', {
+  const thirdLine = clsx('bg-primary-light-color absolute block h-0.5 w-6 transition duration-500 ease-in-out', {
     '-rotate-45': isOpen,
     'translate-y-1.5': !isOpen,
   });
 
   const menuStyles = clsx(
-    'absolute left-0 top-14 z-10 block w-full overflow-hidden bg-primary-menu-color transition-all duration-500 ease-in-out md:hidden',
+    'bg-primary-menu-color absolute top-14 left-0 z-10 block w-full overflow-hidden transition-all duration-500 ease-in-out md:hidden',
     {
       'max-h-0': !isOpen,
       'max-h-60': isOpen,
@@ -37,7 +37,7 @@ function NavBurger(): ReactElement {
         className="relative mr-2 block size-10 focus:outline-none md:hidden"
         onClick={() => setIsOpen(!isOpen)}
       >
-        <div className="absolute left-1/2 top-1/2 block w-6 -translate-x-1/2 -translate-y-1/2 rounded-md">
+        <div className="absolute top-1/2 left-1/2 block w-6 -translate-x-1/2 -translate-y-1/2 rounded-md">
           <span aria-hidden="true" className={firstLine} />
           <span aria-hidden="true" className={secondLine} />
           <span aria-hidden="true" className={thirdLine} />
@@ -47,7 +47,7 @@ function NavBurger(): ReactElement {
       <section className={menuStyles}>
         <ul className="flex flex-col items-center justify-center py-4">
           {NAVIGATION_ITEMS.map((item) => (
-            <li key={item.href} className="w-full border-b border-w-light-white">
+            <li key={item.href} className="border-w-light-white w-full border-b">
               <MenuLink href={item.href} label={item.label} />
             </li>
           ))}

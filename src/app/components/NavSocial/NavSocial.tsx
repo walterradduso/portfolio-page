@@ -12,17 +12,17 @@ const iconMap = {
 
 function NavSocial(): ReactElement {
   return (
-    <section className="my-0 md:mb-4 md:mt-0">
+    <section className="my-0 md:mt-0 md:mb-4">
       <ul className="flex items-center justify-center gap-4 md:gap-6">
         {SOCIAL_LINKS.map((link) => (
-          <li key={link.label} className="text-sm text-primary-light-color hover:text-primary">
+          <li key={link.label} className="text-primary-light-color hover:text-primary text-sm">
             <a aria-label={link.label} href={link.href} rel="noopener noreferrer" target="_blank">
               {iconMap[link.icon]}
             </a>
           </li>
         ))}
 
-        <li className="text-sm text-primary-light-color hover:text-primary">
+        <li className="text-primary-light-color hover:text-primary text-sm">
           <ThemeSwitcher />
         </li>
       </ul>

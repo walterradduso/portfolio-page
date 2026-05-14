@@ -7,7 +7,7 @@ import { CODE_SKILLS, SOFT_SKILLS } from '@/constants/skills';
 
 function Skills(): ReactElement {
   return (
-    <section className="p-5 font-poppins sm:p-10">
+    <section className="font-poppins p-5 sm:p-10">
       <h2 className="mb-6 text-2xl font-semibold">My Skills</h2>
 
       <div className="flex flex-none flex-col flex-wrap gap-6 xl:flex-row">
@@ -18,13 +18,13 @@ function Skills(): ReactElement {
         </div>
 
         <div className="flex flex-1 flex-col flex-wrap">
-          <h3 className="my-4 text-lg sm:mb-4 sm:mt-0">Soft Skills</h3>
+          <h3 className="my-4 text-lg sm:mt-0 sm:mb-4">Soft Skills</h3>
 
           <SkillsPill skills={SOFT_SKILLS} />
         </div>
 
         <div className="flex flex-1 flex-col flex-wrap">
-          <h3 className="my-4 text-lg sm:mb-4 sm:mt-0">Language</h3>
+          <h3 className="my-4 text-lg sm:mt-0 sm:mb-4">Language</h3>
 
           <div className="flex flex-col gap-2">
             <div className="flex items-center gap-2">

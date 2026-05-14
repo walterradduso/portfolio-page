@@ -2,7 +2,7 @@ import { useEffect, useRef } from 'react';
 
 import { sectionThresholds } from '@/constants';
 
-const useIntersectionObserver = (onIntersect: (id: string | null) => void) => {
+const useIntersectionObserver = (onIntersect: (_id: string | null) => void) => {
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {

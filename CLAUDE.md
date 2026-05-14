@@ -1,13 +1,13 @@
 # Portfolio Page — walterradduso.dev
 
-Portfolio personal construido como SPA con Next.js 14 App Router.
+Portfolio personal construido como SPA con Next.js 16 App Router.
 
 ## Tech Stack
 
-- **Framework:** Next.js 14.2.6 (App Router)
-- **UI:** React 18.3.1, TypeScript 5.5.4
-- **Estilos:** Tailwind CSS 3.4.10 + Sass 1.77.8
-- **Package Manager:** pnpm
+- **Framework:** Next.js 16.2.6 (App Router, Turbopack)
+- **UI:** React 19.2.6, TypeScript 6.0.3
+- **Estilos:** Tailwind CSS 4.3 (CSS-first config en `src/styles/globals.css` con `@theme` y `@custom-variant dark`)
+- **Package Manager:** pnpm 11
 - **Node:** v20.14.0 (ver `.nvmrc`)
 
 ## Comandos
@@ -16,6 +16,7 @@ Portfolio personal construido como SPA con Next.js 14 App Router.
 - `pnpm build` — build de producción
 - `pnpm lint` / `pnpm lint-fix` — linting
 - `pnpm prettier-format` — formateo de código
+- `pnpm clean` — borra `node_modules`, `pnpm-lock.yaml`, `.next`, `out`, caches de TS/ESLint/SWC/Turbo
 
 ## Estructura del Proyecto
 
@@ -49,7 +50,7 @@ public/
 
 ## Convenciones de Código
 
-- **Linting:** ESLint airbnb-typescript + Prettier + tailwindcss
+- **Linting:** ESLint 9 (flat config) + Prettier + tailwindcss; reglas declaradas en `eslint.config.mjs`
 - **Formato:** 140 chars max, single quotes, trailing commas, tab width 2
 - **Path alias:** `@/*` → `./src/*`
 - **Exports:** Barrel exports con `index.ts` en cada componente
@@ -65,7 +66,6 @@ public/
 ## Deployment
 
 - **Plataforma:** Vercel
-- **Analytics:** @vercel/analytics integrado en layout.tsx
 
 ## Dependencias Clave
 

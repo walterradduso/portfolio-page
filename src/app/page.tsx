@@ -5,7 +5,7 @@ import { PageContainer } from './components/PageContainer';
 
 export default function Home() {
   return (
-    <main className="ml-0 mt-14 md:ml-60 md:mt-0">
+    <main className="mt-14 ml-0 md:mt-0 md:ml-60">
       <ActiveSectionProvider initialActiveSection="">
         <NavContainer />
         <PageContainer />

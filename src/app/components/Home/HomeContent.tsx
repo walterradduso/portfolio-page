@@ -19,7 +19,7 @@ function HomeContent({ sequence, wrapper }: Props): ReactElement {
     <>
       <div className="flex min-h-20 items-center justify-center">
         <TypeAnimation
-          className="mb-2 flex text-center font-poppins text-5xl font-semibold text-white sm:text-6xl"
+          className="font-poppins mb-2 flex text-center text-5xl font-semibold text-white sm:text-6xl"
           cursor={true}
           repeat={Infinity}
           sequence={sequence}
@@ -28,14 +28,14 @@ function HomeContent({ sequence, wrapper }: Props): ReactElement {
       </div>
 
       <Button
-        className="w-56 border-white text-lg text-white hover:border-primary hover:bg-primary hover:text-white"
+        className="hover:border-primary hover:bg-primary w-56 border-white text-lg text-white hover:text-white"
         text="More About Me"
         onClick={() => scrollIntoView('AboutMe')}
       />
 
       <button
         aria-label="Scroll to About Me"
-        className="absolute bottom-0 h-12 text-white hover:text-primary"
+        className="hover:text-primary absolute bottom-0 h-12 text-white"
         onClick={() => scrollIntoView('AboutMe')}
       >
         <FaChevronDown className="animate-fade-in-down text-xl" />

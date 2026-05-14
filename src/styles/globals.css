@@ -1,3 +1,97 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --breakpoint-xs: 640px;
+  --breakpoint-sm: 768px;
+  --breakpoint-md: 992px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+
+  --color-gray-d: #dddddd;
+  --color-primary-dark-color: #212529;
+  --color-primary-dark-gray: #6c757d;
+  --color-primary-light-color: #ffffff;
+  --color-primary-light-gray: #dee3e4;
+  --color-primary-menu-color: #010101;
+  --color-secondary-dark-color: #343a40;
+  --color-secondary-light-color: #f8f9fa;
+  --color-secondary-menu-color: #121418;
+  --color-w-gray-2: #eaeaea;
+  --color-w-gray: #343a40;
+  --color-w-light-white: #fafafa26;
+  --color-w-red: #c90e0e;
+  --color-w-white: #111418;
+  --color-dark: #333333;
+  --color-light: #f5f5f5;
+  --color-primary: #2f68be;
+  --color-primary-light: #6b9ce8;
+  --color-secondary: #04b4e0;
+
+  --font-poppins: var(--font-poppins);
+
+  --text-fluid-title: calc(1.95rem + 8.4vw);
+
+  --shadow-icon-timeline: 0 0 0 4px white;
+  --shadow-dark-icon-timeline: 0 0 0 4px #1f2937;
+
+  --animate-custom-bounce: customBounce 0.6s;
+  --animate-fade-in-down: fadeInDown 1.5s infinite;
+  --animate-left-enter: leftEnter 0.6s;
+  --animate-right-enter: rightEnter 0.6s;
+}
+
+@keyframes customBounce {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes leftEnter {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  60% {
+    opacity: 1;
+    transform: translateX(20px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes rightEnter {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  60% {
+    opacity: 1;
+    transform: translateX(-20px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

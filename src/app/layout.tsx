@@ -1,4 +1,3 @@
-import { Analytics } from '@vercel/analytics/react';
 import { Metadata } from 'next';
 import { ReactNode } from 'react';
 
@@ -61,8 +60,6 @@ export default function RootLayout({ children }: Props) {
     <html suppressHydrationWarning className={poppins.variable} lang="en">
       <body>
         <ThemeProvider>{children}</ThemeProvider>
-
-        <Analytics />
       </body>
     </html>
   );

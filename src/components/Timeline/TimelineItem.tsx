@@ -31,13 +31,13 @@ function TimelineItem({
   );
 
   const iconStyle = clsx(
-    'absolute left-0 top-2 flex size-8 animate-custom-bounce items-center justify-center overflow-hidden rounded-full bg-primary text-white shadow-dark-icon-timeline dark:shadow-icon-timeline',
-    'sm:left-1/2 sm:top-0.5 sm:-ml-8 sm:size-14',
+    'animate-custom-bounce bg-primary shadow-dark-icon-timeline dark:shadow-icon-timeline absolute top-2 left-0 flex size-8 items-center justify-center overflow-hidden rounded-full text-white',
+    'sm:top-0.5 sm:left-1/2 sm:-ml-8 sm:size-14',
     iconClassName,
   );
 
   const contentStyle = clsx(
-    'relative ml-14 animate-right-enter rounded border-t-4 border-primary bg-primary-light-gray/40 p-4 text-dark',
+    'animate-right-enter border-primary bg-primary-light-gray/40 text-dark relative ml-14 rounded border-t-4 p-4',
     'dark:bg-light dark:text-dark',
     'after:clear-both after:table',
     'sm:ml-0 sm:w-[43%] sm:px-6 sm:py-5',
@@ -48,7 +48,7 @@ function TimelineItem({
     },
   );
 
-  const arrowStyle = clsx('absolute right-full top-3 size-0 rotate-180 border-8 border-transparent border-l-light', {
+  const arrowStyle = clsx('border-l-light absolute top-3 right-full size-0 rotate-180 border-8 border-transparent', {
     'rotate-180 sm:top-4': isRight,
     'sm:rotate-0 sm:left-full sm:top-5': !isRight,
   });
