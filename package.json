@@ -2,6 +2,7 @@
   "name": "portfolio-page",
   "version": "1.2.0",
   "private": true,
+  "packageManager": "pnpm@11.1.2",
   "author": {
     "name": "Walter Radduso",
     "email": "w.radduso@gmail.com",
