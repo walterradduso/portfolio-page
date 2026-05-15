@@ -1,9 +1,10 @@
 'use client';
 
+import { Moon, Sun } from 'lucide-react';
 import { useTheme } from 'next-themes';
 import { useEffect, useState } from 'react';
-import { BsSunFill } from 'react-icons/bs';
-import { RiMoonFill } from 'react-icons/ri';
+
+import { Button } from '@/components/ui/button';
 
 function ThemeSwitcher() {
   const [mounted, setMounted] = useState(false);
@@ -15,19 +16,24 @@ function ThemeSwitcher() {
   }, []);
 
   if (!mounted) {
-    return null;
+    return (
+      <Button aria-hidden="true" className="opacity-0" size="icon" variant="ghost">
+        <Sun />
+      </Button>
+    );
   }
 
   const isDark = resolvedTheme === 'dark';
 
   return (
-    <button
+    <Button
       aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
-      className="hover:text-primary inline-flex cursor-pointer items-center text-sm"
+      size="icon"
+      variant="ghost"
       onClick={() => setTheme(isDark ? 'light' : 'dark')}
     >
-      {isDark ? <BsSunFill /> : <RiMoonFill />}
-    </button>
+      {isDark ? <Sun /> : <Moon />}
+    </Button>
   );
 }
 

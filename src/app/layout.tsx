@@ -1,45 +1,55 @@
-import { Metadata } from 'next';
+import { Metadata, Viewport } from 'next';
 import { ReactNode } from 'react';
 
+import { profile } from '@/data/profile';
 import { Providers as ThemeProvider } from '@/contexts/Theme';
 
-import { poppins } from './fonts';
+import { archivo, spaceGrotesk } from './fonts';
 
 import '@/styles/globals.css';
 
-const siteUrl = 'https://walterradduso.dev';
+const siteUrl = profile.siteUrl;
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: 'Walter Radduso - Frontend Engineer | Personal Portfolio',
+  title: {
+    default: `${profile.name} — ${profile.role}`,
+    template: `%s · ${profile.name}`,
+  },
   description:
-    'Frontend Engineer specializing in React, Next.js, and TypeScript. Explore my projects, skills, and professional experience in web development.',
-  keywords: ['Frontend Engineer', 'React', 'Next.js', 'TypeScript', 'JavaScript', 'Web Developer', 'Walter Radduso', 'Portfolio'],
-  authors: [{ name: 'Walter Radduso', url: siteUrl }],
-  creator: 'Walter Radduso',
+    'Senior Frontend Engineer & Tech Lead with 9+ years building production React apps for fintechs and marketplaces (Nullplatform, Deel, Mercado Libre). React · Next.js · TypeScript.',
+  applicationName: `${profile.name} — Portfolio`,
+  keywords: [
+    'Senior Frontend Engineer',
+    'Frontend Tech Lead',
+    'React',
+    'Next.js',
+    'TypeScript',
+    'JavaScript',
+    'Web Developer',
+    'Micro-frontends',
+    'Walter Radduso',
+    'Frontend Architect',
+    'Portfolio',
+    'Hire frontend engineer',
+  ],
+  authors: [{ name: profile.name, url: siteUrl }],
+  creator: profile.name,
+  alternates: { canonical: siteUrl },
   openGraph: {
     type: 'website',
     locale: 'en_US',
     url: siteUrl,
-    siteName: 'Walter Radduso - Portfolio',
-    title: 'Walter Radduso - Frontend Engineer',
+    siteName: `${profile.name} — Portfolio`,
+    title: `${profile.name} — ${profile.role}`,
     description:
-      'Frontend Engineer specializing in React, Next.js, and TypeScript. Explore my projects, skills, and professional experience.',
-    images: [
-      {
-        url: '/images/walPic.jpeg',
-        width: 400,
-        height: 400,
-        alt: 'Walter Radduso',
-      },
-    ],
+      '9+ years shipping production React apps for fintechs and marketplaces. React · Next.js · TypeScript. Open to senior roles.',
   },
   twitter: {
-    card: 'summary',
-    title: 'Walter Radduso - Frontend Engineer',
-    description: 'Frontend Engineer specializing in React, Next.js, and TypeScript.',
+    card: 'summary_large_image',
+    title: `${profile.name} — ${profile.role}`,
+    description: '9+ years shipping production React apps for fintechs and marketplaces. React · Next.js · TypeScript.',
     creator: '@walterradduso',
-    images: ['/images/walPic.jpeg'],
   },
   robots: {
     index: true,
@@ -51,14 +61,21 @@ export const metadata: Metadata = {
   },
 };
 
+export const viewport: Viewport = {
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#fafafa' },
+    { media: '(prefers-color-scheme: dark)', color: '#09090b' },
+  ],
+};
+
 interface Props {
   children: ReactNode;
 }
 
 export default function RootLayout({ children }: Props) {
   return (
-    <html suppressHydrationWarning className={poppins.variable} lang="en">
-      <body>
+    <html suppressHydrationWarning className={`${archivo.variable} ${spaceGrotesk.variable}`} lang="en">
+      <body className="bg-background text-foreground min-h-screen antialiased">
         <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>

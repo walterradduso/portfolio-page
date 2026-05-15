@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="New SaaS — Work in progress">
+  <defs>
+    <linearGradient id="bgWip" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#18181B"/>
+    </linearGradient>
+    <linearGradient id="accentWip" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#2563EB"/>
+      <stop offset="100%" stop-color="#60A5FA"/>
+    </linearGradient>
+    <pattern id="stripesWip" patternUnits="userSpaceOnUse" width="24" height="24" patternTransform="rotate(45)">
+      <rect width="24" height="24" fill="transparent"/>
+      <rect width="12" height="24" fill="#2563EB" opacity="0.05"/>
+    </pattern>
+  </defs>
+
+  <rect width="800" height="500" fill="url(#bgWip)"/>
+  <rect width="800" height="500" fill="url(#stripesWip)"/>
+
+  <g opacity="0.5">
+    <circle cx="680" cy="100" r="160" fill="url(#accentWip)" opacity="0.18"/>
+    <circle cx="100" cy="420" r="180" fill="url(#accentWip)" opacity="0.1"/>
+  </g>
+
+  <g transform="translate(64 88)">
+    <rect width="200" height="28" rx="6" fill="#2563EB" opacity="0.22"/>
+    <circle cx="16" cy="14" r="3.5" fill="#60A5FA">
+      <animate attributeName="opacity" values="1;0.3;1" dur="1.6s" repeatCount="indefinite"/>
+    </circle>
+    <text x="30" y="19" font-family="ui-sans-serif, system-ui, sans-serif" font-size="13" font-weight="600" fill="#93C5FD" letter-spacing="1">WORK IN PROGRESS</text>
+  </g>
+
+  <g transform="translate(64 150)">
+    <text font-family="ui-sans-serif, system-ui, sans-serif" font-size="56" font-weight="700" fill="#FAFAFA">
+      <tspan x="0" y="0">Currently building</tspan>
+      <tspan x="0" y="64">a new SaaS.</tspan>
+    </text>
+    <text x="0" y="120" font-family="ui-sans-serif, system-ui, sans-serif" font-size="16" fill="#A1A1AA">Side project · Frontend + backend · End-to-end</text>
+  </g>
+
+  <g transform="translate(64 380)">
+    <rect x="0" y="0" width="600" height="6" rx="3" fill="#27272A"/>
+    <rect x="0" y="0" width="380" height="6" rx="3" fill="url(#accentWip)"/>
+    <text x="608" y="10" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12" fill="#71717A">~63%</text>
+  </g>
+</svg>

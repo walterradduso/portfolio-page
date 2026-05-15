@@ -1,1 +1,2 @@
-export * from './poppins.font';
+export * from './archivo.font';
+export * from './spaceGrotesk.font';

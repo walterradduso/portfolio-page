@@ -1,15 +1,31 @@
 import { ActiveSectionProvider } from '@/contexts/ActiveSection';
 
-import { NavContainer } from './components/NavContainer';
-import { PageContainer } from './components/PageContainer';
+import { About } from './sections/About';
+import { Contact } from './sections/Contact';
+import { Experience } from './sections/Experience';
+import { Footer } from './sections/Footer';
+import { Hero } from './sections/Hero';
+import { Navigation } from './sections/Navigation';
+import { Stack } from './sections/Stack';
+import { TrustBar } from './sections/TrustBar';
+import { Work } from './sections/Work';
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <main className="mt-14 ml-0 md:mt-0 md:ml-60">
-      <ActiveSectionProvider initialActiveSection="">
-        <NavContainer />
-        <PageContainer />
-      </ActiveSectionProvider>
-    </main>
+    <ActiveSectionProvider initialActiveSection="home">
+      <Navigation />
+
+      <main className="flex flex-col">
+        <Hero />
+        <TrustBar />
+        <About />
+        <Experience />
+        <Work />
+        <Stack />
+        <Contact />
+      </main>
+
+      <Footer />
+    </ActiveSectionProvider>
   );
 }

@@ -7,36 +7,41 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.2.0] - 2026-05-14
+
 ### Added
 
-- Added `eslint.config.mjs` (ESLint 9 flat config) and `.prettierrc.json`.
-- Added `src/global.d.ts` declaring `*.css` modules to satisfy TypeScript 6's `noUncheckedSideEffectImports`.
-- Migrated Tailwind theme to CSS-first config in `src/styles/globals.css` using `@import 'tailwindcss'`, `@theme` for tokens (colors, breakpoints, font, text sizes, shadows, animations) and `@custom-variant dark (&:where(.dark, .dark *))` for dark mode.
+- Adopted **shadcn/ui** as the design system. Added `components.json`, `src/lib/utils.ts` (`cn` helper) and primitives in `src/components/ui/` (`button`, `card`, `badge`, `separator`, `navigation-menu`, `sheet`, `tooltip`).
+- New section structure under `src/app/sections/`: `Hero`, `TrustBar`, `About`, `Experience`, `Work`, `Stack`, `Contact`, `Footer`, `Navigation`.
+- New `src/data/profile.ts` — single source of truth for profile, experience, featured projects, stack groups, companies, navigation sections, and contact data.
+- New reusable components: `SectionHeading`, `MotionFadeIn` (framer-motion wrapper that honors `prefers-reduced-motion`), `ExperienceItem`, `work/FeaturedProject`, `work/RepoCard`, and `icons/BrandIcons` (inline SVGs for LinkedIn/GitHub/Twitter).
+- **Hybrid Selected Work**: 3 curated featured projects + auto-fetched GitHub repos (filtered to those with a description and either a homepage or topics).
+- Dynamic OpenGraph image generated via `src/app/opengraph-image.tsx` (`next/og`, edge runtime, 1200×630).
+- `src/app/sitemap.ts` with `MetadataRoute.Sitemap`.
+- Tailwind 4 token system rewritten in shadcn shape (`--background`, `--foreground`, `--primary`, `--accent`, etc.) with `oklch` values for both `:root` and `.dark`.
+- Global `prefers-reduced-motion` CSS guard, smooth scroll, and `scroll-margin-top` for anchor offsets.
+- `tw-animate-css` plugin (Tailwind 4 replacement for `tailwindcss-animate`).
 
 ### Changed
 
-- Upgraded Next.js from 14.2.6 to 16.2.6 (Turbopack by default).
-- Upgraded React and React DOM from 18.3.1 to 19.2.6.
-- Upgraded TypeScript from 5.5.4 to 6.0.3.
-- Upgraded ESLint from 8.57.0 to 9.39.4 with flat config based on `eslint-config-next@16` (core-web-vitals + typescript).
-- Upgraded Tailwind CSS from 3.4.10 to 4.3.0 (CSS-first config, Oxide engine, `@tailwindcss/postcss` plugin).
-- Upgraded @types/node from 22 to 25, @types/react and @types/react-dom from 18 to 19, eslint-config-prettier from 9 to 10.
-- Bumped postcss, prettier, prettier-plugin-tailwindcss to latest minor/patch.
-- Replaced `next lint` script with direct `eslint src` (Next 16 removed the lint command).
-- Replaced PostCSS `tailwindcss + autoprefixer` plugins with `@tailwindcss/postcss` (autoprefixer is built into Tailwind 4).
-- Cleaned `next.config.js` (removed deprecated `swcMinify` and `sassOptions`).
-- Replaced `<a href="/">` with `<Link />` from `next/link` in `NavPicture` to comply with `@next/next/no-html-link-for-pages`.
+- Complete redesign of the personal portfolio site, end-to-end: components, styles, copy, structure, and information architecture.
+- Replaced **Poppins** with **Archivo** (headings) + **Space Grotesk** (body), wired via `next/font/google` with CSS variables `--font-archivo` / `--font-space-grotesk`.
+- Rewrote `src/app/layout.tsx` with expanded metadata (canonical URL, OG/Twitter card, themeColor viewport, structured keywords).
+- Rewrote `src/app/page.tsx` to compose the new sections in conversion order: Hero → TrustBar → About → Experience → Work → Stack → Contact → Footer.
+- Updated `src/app/services/repositories.service.ts`: added filter (description required + homepage OR topics), `Promise`-safe error handling, configurable limit, `per_page=100&sort=updated`.
+- Rewrote `error.tsx`, `loading.tsx`, `not-found.tsx` against the new design tokens.
+- Reworked `Navigation` into a sticky top navbar with shadcn `Sheet` for mobile (replaces the old left sidebar).
+- Updated `next.config.js`: `optimizePackageImports` now lists `lucide-react` and `framer-motion`.
+- `ThemeSwitcher` now uses lucide-react icons and a shadcn `Button`.
+- Updated `src/constants/sectionThreshold.ts` with new section IDs (`home`, `about`, `experience`, `work`, `stack`, `contact`).
 
 ### Removed
 
-- Removed @vercel/analytics integration.
-- Removed unused `sass` devDependency (no `.scss`/`.sass` files in the project).
-- Removed `autoprefixer` (built into Tailwind 4).
-- Removed `tailwind.config.js` (theme migrated to CSS-first `@theme` block in `globals.css`).
-- Removed `eslint-plugin-tailwindcss` (broken with Tailwind 4 + pnpm; class ordering covered by `prettier-plugin-tailwindcss`).
-- Removed `eslint-config-airbnb-typescript` (abandoned, incompatible with ESLint 9 and @typescript-eslint v8).
-- Removed `.eslintrc.json` (replaced by flat config).
-- Dropped redundant direct devDependencies now provided transitively by `eslint-config-next@16`: `@eslint/js`, `@typescript-eslint/eslint-plugin`, `@typescript-eslint/parser`, `eslint-plugin-import`, `eslint-plugin-react`, `typescript-eslint`.
+- Removed `react-icons` and `react-type-animation` (replaced by `lucide-react` and inline brand SVGs; hero no longer uses a typewriter animation).
+- Removed legacy components: `src/components/Button`, `Link`, `Pill`, `SkillsPill`, `Title`, `Timeline`, `TimelineItem`, `MenuLink`, `DownloadResume`.
+- Removed legacy sections under `src/app/components/`: `Home`, `AboutMe`, `Resume`, `Portfolio`, `Skills`, `Footer`, `Navigation`-family (`NavBurger`, `NavContainer`, `NavLinks`, `NavPicture`, `NavSocial`), `RenderCompanyLogo`, `PageContainer`.
+- Removed `src/constants/skills.tsx`, `socialLinks.ts`, `navigationItems.ts`, `languageIcon.tsx` (migrated to `src/data/profile.ts`).
+- Removed Poppins font config and Poppins-related CSS tokens.
 
 ## [1.1.3] - 2024-07-26
 
